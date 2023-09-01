@@ -36,10 +36,10 @@ const (
 	AdministrativeGenderUnknown
 )
 
-func (code *NameUse) MarshalBSONValue() (bsontype.Type, []byte, error) {
+func (code *AdministrativeGender) MarshalBSONValue() (bsontype.Type, []byte, error) {
 	return bson.MarshalValue(code.Code())
 }
-func (code *NameUse) UnmarshalBSONValue(t bsontype.Type, bytes []byte) error {
+func (code *AdministrativeGender) UnmarshalBSONValue(t bsontype.Type, bytes []byte) error {
 	if t != bsontype.String {
 		err := fmt.Errorf("UnmarshalBSONValue error: cannot unmarshal non string value")
 		return err
