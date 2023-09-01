@@ -17,6 +17,9 @@ package fhir
 import (
 	"encoding/json"
 	"fmt"
+	bson "go.mongodb.org/mongo-driver/bson"
+	bsonrw "go.mongodb.org/mongo-driver/bson/bsonrw"
+	bsontype "go.mongodb.org/mongo-driver/bson/bsontype"
 	"strings"
 )
 
@@ -32,6 +35,39 @@ const (
 	AdministrativeGenderOther
 	AdministrativeGenderUnknown
 )
+
+func (code *NameUse) MarshalBSONValue() (bsontype.Type, []byte, error) {
+	return bson.MarshalValue(code.Code())
+}
+func (code *NameUse) UnmarshalBSONValue(t bsontype.Type, bytes []byte) error {
+	if t != bsontype.String {
+		err := fmt.Errorf("UnmarshalBSONValue error: cannot unmarshal non string value")
+		return err
+	}
+	reader := bsonrw.NewBSONValueReader(t, bytes)
+	decoder, err := bson.NewDecoder(reader)
+	if err != nil {
+		return err
+	}
+	var s string
+	err = decoder.Decode(&s)
+	if err != nil {
+		return err
+	}
+	switch s {
+	case "male":
+		*code = AdministrativeGenderMale
+	case "female":
+		*code = AdministrativeGenderFemale
+	case "other":
+		*code = AdministrativeGenderOther
+	case "unknown":
+		*code = AdministrativeGenderUnknown
+	default:
+		return fmt.Errorf("unknown AdministrativeGender code `%s`", s)
+	}
+	return nil
+}
 
  func (code *AdministrativeGender)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
