@@ -73,7 +73,7 @@ type OtherAdverseEvent AdverseEvent
 		OtherAdverseEvent
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherAdverseEvent: OtherAdverseEvent(r),
+		OtherAdverseEvent: OtherAdverseEvent(*r),
 		ResourceType:      "AdverseEvent",
 	})
 }

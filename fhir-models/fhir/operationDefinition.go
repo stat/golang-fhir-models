@@ -100,7 +100,7 @@ type OtherOperationDefinition OperationDefinition
 		OtherOperationDefinition
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherOperationDefinition: OtherOperationDefinition(r),
+		OtherOperationDefinition: OtherOperationDefinition(*r),
 		ResourceType:             "OperationDefinition",
 	})
 }

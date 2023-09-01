@@ -56,7 +56,7 @@ type OtherDocumentManifest DocumentManifest
 		OtherDocumentManifest
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherDocumentManifest: OtherDocumentManifest(r),
+		OtherDocumentManifest: OtherDocumentManifest(*r),
 		ResourceType:          "DocumentManifest",
 	})
 }

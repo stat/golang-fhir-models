@@ -52,7 +52,7 @@ type OtherDeviceUseStatement DeviceUseStatement
 		OtherDeviceUseStatement
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherDeviceUseStatement: OtherDeviceUseStatement(r),
+		OtherDeviceUseStatement: OtherDeviceUseStatement(*r),
 		ResourceType:            "DeviceUseStatement",
 	})
 }

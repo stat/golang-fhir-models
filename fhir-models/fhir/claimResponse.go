@@ -198,7 +198,7 @@ type OtherClaimResponse ClaimResponse
 		OtherClaimResponse
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherClaimResponse: OtherClaimResponse(r),
+		OtherClaimResponse: OtherClaimResponse(*r),
 		ResourceType:       "ClaimResponse",
 	})
 }

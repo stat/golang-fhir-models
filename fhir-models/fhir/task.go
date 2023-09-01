@@ -188,7 +188,7 @@ type OtherTask Task
 		OtherTask
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherTask:    OtherTask(r),
+		OtherTask:    OtherTask(*r),
 		ResourceType: "Task",
 	})
 }

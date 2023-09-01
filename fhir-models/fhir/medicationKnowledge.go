@@ -182,7 +182,7 @@ type OtherMedicationKnowledge MedicationKnowledge
 		OtherMedicationKnowledge
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherMedicationKnowledge: OtherMedicationKnowledge(r),
+		OtherMedicationKnowledge: OtherMedicationKnowledge(*r),
 		ResourceType:             "MedicationKnowledge",
 	})
 }

@@ -68,7 +68,7 @@ type OtherGroup Group
 		OtherGroup
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherGroup:   OtherGroup(r),
+		OtherGroup:   OtherGroup(*r),
 		ResourceType: "Group",
 	})
 }

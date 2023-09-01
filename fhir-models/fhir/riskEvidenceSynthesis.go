@@ -113,7 +113,7 @@ type OtherRiskEvidenceSynthesis RiskEvidenceSynthesis
 		OtherRiskEvidenceSynthesis
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherRiskEvidenceSynthesis: OtherRiskEvidenceSynthesis(r),
+		OtherRiskEvidenceSynthesis: OtherRiskEvidenceSynthesis(*r),
 		ResourceType:               "RiskEvidenceSynthesis",
 	})
 }

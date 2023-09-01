@@ -84,7 +84,7 @@ type OtherHealthcareService HealthcareService
 		OtherHealthcareService
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherHealthcareService: OtherHealthcareService(r),
+		OtherHealthcareService: OtherHealthcareService(*r),
 		ResourceType:           "HealthcareService",
 	})
 }

@@ -69,7 +69,7 @@ type OtherAppointment Appointment
 		OtherAppointment
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherAppointment: OtherAppointment(r),
+		OtherAppointment: OtherAppointment(*r),
 		ResourceType:     "Appointment",
 	})
 }

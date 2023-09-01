@@ -135,7 +135,7 @@ type OtherValueSet ValueSet
 		OtherValueSet
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherValueSet: OtherValueSet(r),
+		OtherValueSet: OtherValueSet(*r),
 		ResourceType:  "ValueSet",
 	})
 }

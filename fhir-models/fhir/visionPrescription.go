@@ -71,7 +71,7 @@ type OtherVisionPrescription VisionPrescription
 		OtherVisionPrescription
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherVisionPrescription: OtherVisionPrescription(r),
+		OtherVisionPrescription: OtherVisionPrescription(*r),
 		ResourceType:            "VisionPrescription",
 	})
 }

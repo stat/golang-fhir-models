@@ -105,7 +105,7 @@ type OtherConceptMap ConceptMap
 		OtherConceptMap
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherConceptMap: OtherConceptMap(r),
+		OtherConceptMap: OtherConceptMap(*r),
 		ResourceType:    "ConceptMap",
 	})
 }

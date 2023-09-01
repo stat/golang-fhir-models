@@ -73,7 +73,7 @@ type OtherClinicalImpression ClinicalImpression
 		OtherClinicalImpression
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherClinicalImpression: OtherClinicalImpression(r),
+		OtherClinicalImpression: OtherClinicalImpression(*r),
 		ResourceType:            "ClinicalImpression",
 	})
 }

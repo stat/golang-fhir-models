@@ -118,12 +118,12 @@ type EffectEvidenceSynthesisCertaintyCertaintySubcomponent struct {
 type OtherEffectEvidenceSynthesis EffectEvidenceSynthesis
 
 // MarshalJSON marshals the given EffectEvidenceSynthesis as JSON into a byte slice
- func (r *EffectEvidenceSynthesis)MarshalJSON() ([]byte, error) {
+func (r *EffectEvidenceSynthesis) MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherEffectEvidenceSynthesis
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherEffectEvidenceSynthesis: OtherEffectEvidenceSynthesis(r),
+		OtherEffectEvidenceSynthesis: OtherEffectEvidenceSynthesis(*r),
 		ResourceType:                 "EffectEvidenceSynthesis",
 	})
 }

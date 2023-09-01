@@ -69,7 +69,7 @@ type OtherAllergyIntolerance AllergyIntolerance
 		OtherAllergyIntolerance
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherAllergyIntolerance: OtherAllergyIntolerance(r),
+		OtherAllergyIntolerance: OtherAllergyIntolerance(*r),
 		ResourceType:            "AllergyIntolerance",
 	})
 }

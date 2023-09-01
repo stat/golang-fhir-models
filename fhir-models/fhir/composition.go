@@ -91,7 +91,7 @@ type OtherComposition Composition
 		OtherComposition
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherComposition: OtherComposition(r),
+		OtherComposition: OtherComposition(*r),
 		ResourceType:     "Composition",
 	})
 }

@@ -57,7 +57,7 @@ type OtherCatalogEntry CatalogEntry
 		OtherCatalogEntry
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherCatalogEntry: OtherCatalogEntry(r),
+		OtherCatalogEntry: OtherCatalogEntry(*r),
 		ResourceType:      "CatalogEntry",
 	})
 }

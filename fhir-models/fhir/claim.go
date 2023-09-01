@@ -210,7 +210,7 @@ type OtherClaim Claim
 		OtherClaim
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherClaim:   OtherClaim(r),
+		OtherClaim:   OtherClaim(*r),
 		ResourceType: "Claim",
 	})
 }

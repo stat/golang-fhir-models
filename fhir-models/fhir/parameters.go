@@ -93,7 +93,7 @@ type OtherParameters Parameters
 		OtherParameters
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherParameters: OtherParameters(r),
+		OtherParameters: OtherParameters(*r),
 		ResourceType:    "Parameters",
 	})
 }

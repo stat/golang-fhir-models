@@ -170,7 +170,7 @@ type OtherSubstanceSpecification SubstanceSpecification
 		OtherSubstanceSpecification
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherSubstanceSpecification: OtherSubstanceSpecification(r),
+		OtherSubstanceSpecification: OtherSubstanceSpecification(*r),
 		ResourceType:                "SubstanceSpecification",
 	})
 }

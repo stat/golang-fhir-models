@@ -62,12 +62,12 @@ type PractitionerRoleNotAvailable struct {
 type OtherPractitionerRole PractitionerRole
 
 // MarshalJSON marshals the given PractitionerRole as JSON into a byte slice
- func (r *PractitionerRole)MarshalJSON() ([]byte, error) {
+func (r *PractitionerRole) MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherPractitionerRole
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherPractitionerRole: OtherPractitionerRole(r),
+		OtherPractitionerRole: OtherPractitionerRole(*r),
 		ResourceType:          "PractitionerRole",
 	})
 }

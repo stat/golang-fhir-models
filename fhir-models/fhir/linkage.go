@@ -47,7 +47,7 @@ type OtherLinkage Linkage
 		OtherLinkage
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherLinkage: OtherLinkage(r),
+		OtherLinkage: OtherLinkage(*r),
 		ResourceType: "Linkage",
 	})
 }

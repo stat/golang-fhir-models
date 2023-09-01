@@ -49,7 +49,7 @@ type OtherOperationOutcome OperationOutcome
 		OtherOperationOutcome
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherOperationOutcome: OtherOperationOutcome(r),
+		OtherOperationOutcome: OtherOperationOutcome(*r),
 		ResourceType:          "OperationOutcome",
 	})
 }

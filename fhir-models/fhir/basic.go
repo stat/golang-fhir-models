@@ -42,7 +42,7 @@ type OtherBasic Basic
 		OtherBasic
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherBasic:   OtherBasic(r),
+		OtherBasic:   OtherBasic(*r),
 		ResourceType: "Basic",
 	})
 }

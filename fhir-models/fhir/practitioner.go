@@ -56,7 +56,7 @@ type OtherPractitioner Practitioner
 		OtherPractitioner
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherPractitioner: OtherPractitioner(r),
+		OtherPractitioner: OtherPractitioner(*r),
 		ResourceType:      "Practitioner",
 	})
 }

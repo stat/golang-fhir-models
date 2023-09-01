@@ -74,7 +74,7 @@ type OtherDeviceRequest DeviceRequest
 		OtherDeviceRequest
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherDeviceRequest: OtherDeviceRequest(r),
+		OtherDeviceRequest: OtherDeviceRequest(*r),
 		ResourceType:       "DeviceRequest",
 	})
 }

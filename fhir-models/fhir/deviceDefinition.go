@@ -105,7 +105,7 @@ type OtherDeviceDefinition DeviceDefinition
 		OtherDeviceDefinition
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherDeviceDefinition: OtherDeviceDefinition(r),
+		OtherDeviceDefinition: OtherDeviceDefinition(*r),
 		ResourceType:          "DeviceDefinition",
 	})
 }

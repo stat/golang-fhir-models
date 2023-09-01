@@ -79,7 +79,7 @@ type OtherDocumentReference DocumentReference
 		OtherDocumentReference
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherDocumentReference: OtherDocumentReference(r),
+		OtherDocumentReference: OtherDocumentReference(*r),
 		ResourceType:           "DocumentReference",
 	})
 }

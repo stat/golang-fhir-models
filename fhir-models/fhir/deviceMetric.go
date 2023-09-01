@@ -55,7 +55,7 @@ type OtherDeviceMetric DeviceMetric
 		OtherDeviceMetric
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherDeviceMetric: OtherDeviceMetric(r),
+		OtherDeviceMetric: OtherDeviceMetric(*r),
 		ResourceType:      "DeviceMetric",
 	})
 }

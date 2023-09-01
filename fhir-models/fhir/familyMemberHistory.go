@@ -71,12 +71,12 @@ type FamilyMemberHistoryCondition struct {
 type OtherFamilyMemberHistory FamilyMemberHistory
 
 // MarshalJSON marshals the given FamilyMemberHistory as JSON into a byte slice
- func (r *FamilyMemberHistory)MarshalJSON() ([]byte, error) {
+func (r *FamilyMemberHistory) MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherFamilyMemberHistory
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherFamilyMemberHistory: OtherFamilyMemberHistory(r),
+		OtherFamilyMemberHistory: OtherFamilyMemberHistory(*r),
 		ResourceType:             "FamilyMemberHistory",
 	})
 }

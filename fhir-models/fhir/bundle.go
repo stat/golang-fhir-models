@@ -87,7 +87,7 @@ type OtherBundle Bundle
 		OtherBundle
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherBundle:  OtherBundle(r),
+		OtherBundle:  OtherBundle(*r),
 		ResourceType: "Bundle",
 	})
 }

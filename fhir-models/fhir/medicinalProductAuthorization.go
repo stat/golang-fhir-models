@@ -68,12 +68,12 @@ type MedicinalProductAuthorizationProcedure struct {
 type OtherMedicinalProductAuthorization MedicinalProductAuthorization
 
 // MarshalJSON marshals the given MedicinalProductAuthorization as JSON into a byte slice
- func (r *MedicinalProductAuthorization)MarshalJSON() ([]byte, error) {
+func (r *MedicinalProductAuthorization) MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherMedicinalProductAuthorization
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherMedicinalProductAuthorization: OtherMedicinalProductAuthorization(r),
+		OtherMedicinalProductAuthorization: OtherMedicinalProductAuthorization(*r),
 		ResourceType:                       "MedicinalProductAuthorization",
 	})
 }

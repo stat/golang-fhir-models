@@ -68,7 +68,7 @@ type OtherCommunicationRequest CommunicationRequest
 		OtherCommunicationRequest
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherCommunicationRequest: OtherCommunicationRequest(r),
+		OtherCommunicationRequest: OtherCommunicationRequest(*r),
 		ResourceType:              "CommunicationRequest",
 	})
 }

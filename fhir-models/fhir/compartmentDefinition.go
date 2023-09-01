@@ -59,7 +59,7 @@ type OtherCompartmentDefinition CompartmentDefinition
 		OtherCompartmentDefinition
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherCompartmentDefinition: OtherCompartmentDefinition(r),
+		OtherCompartmentDefinition: OtherCompartmentDefinition(*r),
 		ResourceType:               "CompartmentDefinition",
 	})
 }

@@ -60,12 +60,12 @@ type SupplyRequestParameter struct {
 type OtherSupplyRequest SupplyRequest
 
 // MarshalJSON marshals the given SupplyRequest as JSON into a byte slice
- func (r *SupplyRequest)MarshalJSON() ([]byte, error) {
+func (r *SupplyRequest) MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherSupplyRequest
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherSupplyRequest: OtherSupplyRequest(r),
+		OtherSupplyRequest: OtherSupplyRequest(*r),
 		ResourceType:       "SupplyRequest",
 	})
 }

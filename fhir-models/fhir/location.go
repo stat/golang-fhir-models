@@ -71,7 +71,7 @@ type OtherLocation Location
 		OtherLocation
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherLocation: OtherLocation(r),
+		OtherLocation: OtherLocation(*r),
 		ResourceType:  "Location",
 	})
 }

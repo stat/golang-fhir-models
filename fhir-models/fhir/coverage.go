@@ -78,7 +78,7 @@ type OtherCoverage Coverage
 		OtherCoverage
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherCoverage: OtherCoverage(r),
+		OtherCoverage: OtherCoverage(*r),
 		ResourceType:  "Coverage",
 	})
 }

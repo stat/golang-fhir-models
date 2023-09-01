@@ -76,7 +76,7 @@ type OtherMessageHeader MessageHeader
 		OtherMessageHeader
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherMessageHeader: OtherMessageHeader(r),
+		OtherMessageHeader: OtherMessageHeader(*r),
 		ResourceType:       "MessageHeader",
 	})
 }

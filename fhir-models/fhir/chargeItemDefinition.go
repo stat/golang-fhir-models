@@ -84,7 +84,7 @@ type OtherChargeItemDefinition ChargeItemDefinition
 		OtherChargeItemDefinition
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherChargeItemDefinition: OtherChargeItemDefinition(r),
+		OtherChargeItemDefinition: OtherChargeItemDefinition(*r),
 		ResourceType:              "ChargeItemDefinition",
 	})
 }

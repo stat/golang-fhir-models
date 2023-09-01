@@ -90,7 +90,7 @@ type OtherImagingStudy ImagingStudy
 		OtherImagingStudy
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherImagingStudy: OtherImagingStudy(r),
+		OtherImagingStudy: OtherImagingStudy(*r),
 		ResourceType:      "ImagingStudy",
 	})
 }

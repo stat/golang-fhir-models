@@ -74,7 +74,7 @@ type OtherPaymentReconciliation PaymentReconciliation
 		OtherPaymentReconciliation
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherPaymentReconciliation: OtherPaymentReconciliation(r),
+		OtherPaymentReconciliation: OtherPaymentReconciliation(*r),
 		ResourceType:               "PaymentReconciliation",
 	})
 }

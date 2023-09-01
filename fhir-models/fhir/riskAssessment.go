@@ -68,7 +68,7 @@ type OtherRiskAssessment RiskAssessment
 		OtherRiskAssessment
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherRiskAssessment: OtherRiskAssessment(r),
+		OtherRiskAssessment: OtherRiskAssessment(*r),
 		ResourceType:        "RiskAssessment",
 	})
 }

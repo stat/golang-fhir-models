@@ -184,7 +184,7 @@ type OtherCapabilityStatement CapabilityStatement
 		OtherCapabilityStatement
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherCapabilityStatement: OtherCapabilityStatement(r),
+		OtherCapabilityStatement: OtherCapabilityStatement(*r),
 		ResourceType:             "CapabilityStatement",
 	})
 }

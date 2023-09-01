@@ -59,7 +59,7 @@ type OtherList List
 		OtherList
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherList:    OtherList(r),
+		OtherList:    OtherList(*r),
 		ResourceType: "List",
 	})
 }

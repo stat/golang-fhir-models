@@ -96,7 +96,7 @@ type OtherConsent Consent
 		OtherConsent
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherConsent: OtherConsent(r),
+		OtherConsent: OtherConsent(*r),
 		ResourceType: "Consent",
 	})
 }

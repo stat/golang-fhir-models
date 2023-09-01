@@ -90,7 +90,7 @@ type OtherCoverageEligibilityRequest CoverageEligibilityRequest
 		OtherCoverageEligibilityRequest
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherCoverageEligibilityRequest: OtherCoverageEligibilityRequest(r),
+		OtherCoverageEligibilityRequest: OtherCoverageEligibilityRequest(*r),
 		ResourceType:                    "CoverageEligibilityRequest",
 	})
 }

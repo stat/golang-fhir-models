@@ -113,7 +113,7 @@ type OtherCodeSystem CodeSystem
 		OtherCodeSystem
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherCodeSystem: OtherCodeSystem(r),
+		OtherCodeSystem: OtherCodeSystem(*r),
 		ResourceType:    "CodeSystem",
 	})
 }

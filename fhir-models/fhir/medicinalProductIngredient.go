@@ -81,7 +81,7 @@ type OtherMedicinalProductIngredient MedicinalProductIngredient
 		OtherMedicinalProductIngredient
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherMedicinalProductIngredient: OtherMedicinalProductIngredient(r),
+		OtherMedicinalProductIngredient: OtherMedicinalProductIngredient(*r),
 		ResourceType:                    "MedicinalProductIngredient",
 	})
 }

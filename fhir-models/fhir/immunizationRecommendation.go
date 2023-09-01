@@ -68,7 +68,7 @@ type OtherImmunizationRecommendation ImmunizationRecommendation
 		OtherImmunizationRecommendation
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherImmunizationRecommendation: OtherImmunizationRecommendation(r),
+		OtherImmunizationRecommendation: OtherImmunizationRecommendation(*r),
 		ResourceType:                    "ImmunizationRecommendation",
 	})
 }

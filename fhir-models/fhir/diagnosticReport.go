@@ -63,7 +63,7 @@ type OtherDiagnosticReport DiagnosticReport
 		OtherDiagnosticReport
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherDiagnosticReport: OtherDiagnosticReport(r),
+		OtherDiagnosticReport: OtherDiagnosticReport(*r),
 		ResourceType:          "DiagnosticReport",
 	})
 }

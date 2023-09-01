@@ -95,7 +95,7 @@ type OtherCarePlan CarePlan
 		OtherCarePlan
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherCarePlan: OtherCarePlan(r),
+		OtherCarePlan: OtherCarePlan(*r),
 		ResourceType:  "CarePlan",
 	})
 }

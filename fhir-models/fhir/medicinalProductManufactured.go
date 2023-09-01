@@ -39,12 +39,12 @@ type MedicinalProductManufactured struct {
 type OtherMedicinalProductManufactured MedicinalProductManufactured
 
 // MarshalJSON marshals the given MedicinalProductManufactured as JSON into a byte slice
- func (r *MedicinalProductManufactured)MarshalJSON() ([]byte, error) {
+func (r *MedicinalProductManufactured) MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherMedicinalProductManufactured
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherMedicinalProductManufactured: OtherMedicinalProductManufactured(r),
+		OtherMedicinalProductManufactured: OtherMedicinalProductManufactured(*r),
 		ResourceType:                      "MedicinalProductManufactured",
 	})
 }

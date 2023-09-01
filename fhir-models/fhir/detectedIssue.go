@@ -65,7 +65,7 @@ type OtherDetectedIssue DetectedIssue
 		OtherDetectedIssue
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherDetectedIssue: OtherDetectedIssue(r),
+		OtherDetectedIssue: OtherDetectedIssue(*r),
 		ResourceType:       "DetectedIssue",
 	})
 }

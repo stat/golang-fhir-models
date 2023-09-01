@@ -96,7 +96,7 @@ type OtherMeasureReport MeasureReport
 		OtherMeasureReport
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherMeasureReport: OtherMeasureReport(r),
+		OtherMeasureReport: OtherMeasureReport(*r),
 		ResourceType:       "MeasureReport",
 	})
 }

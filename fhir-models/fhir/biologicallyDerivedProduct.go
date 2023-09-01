@@ -84,7 +84,7 @@ type OtherBiologicallyDerivedProduct BiologicallyDerivedProduct
 		OtherBiologicallyDerivedProduct
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherBiologicallyDerivedProduct: OtherBiologicallyDerivedProduct(r),
+		OtherBiologicallyDerivedProduct: OtherBiologicallyDerivedProduct(*r),
 		ResourceType:                    "BiologicallyDerivedProduct",
 	})
 }

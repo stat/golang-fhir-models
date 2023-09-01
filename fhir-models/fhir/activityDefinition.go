@@ -104,7 +104,7 @@ type OtherActivityDefinition ActivityDefinition
 		OtherActivityDefinition
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherActivityDefinition: OtherActivityDefinition(r),
+		OtherActivityDefinition: OtherActivityDefinition(*r),
 		ResourceType:            "ActivityDefinition",
 	})
 }

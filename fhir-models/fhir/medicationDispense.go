@@ -79,7 +79,7 @@ type OtherMedicationDispense MedicationDispense
 		OtherMedicationDispense
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherMedicationDispense: OtherMedicationDispense(r),
+		OtherMedicationDispense: OtherMedicationDispense(*r),
 		ResourceType:            "MedicationDispense",
 	})
 }

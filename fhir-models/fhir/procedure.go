@@ -84,7 +84,7 @@ type OtherProcedure Procedure
 		OtherProcedure
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherProcedure: OtherProcedure(r),
+		OtherProcedure: OtherProcedure(*r),
 		ResourceType:   "Procedure",
 	})
 }

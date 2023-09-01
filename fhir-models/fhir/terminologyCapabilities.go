@@ -136,7 +136,7 @@ type OtherTerminologyCapabilities TerminologyCapabilities
 		OtherTerminologyCapabilities
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherTerminologyCapabilities: OtherTerminologyCapabilities(r),
+		OtherTerminologyCapabilities: OtherTerminologyCapabilities(*r),
 		ResourceType:                 "TerminologyCapabilities",
 	})
 }

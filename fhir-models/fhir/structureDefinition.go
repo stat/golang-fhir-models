@@ -92,7 +92,7 @@ type OtherStructureDefinition StructureDefinition
 		OtherStructureDefinition
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherStructureDefinition: OtherStructureDefinition(r),
+		OtherStructureDefinition: OtherStructureDefinition(*r),
 		ResourceType:             "StructureDefinition",
 	})
 }

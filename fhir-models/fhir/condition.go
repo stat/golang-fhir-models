@@ -77,7 +77,7 @@ type OtherCondition Condition
 		OtherCondition
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherCondition: OtherCondition(r),
+		OtherCondition: OtherCondition(*r),
 		ResourceType:   "Condition",
 	})
 }

@@ -218,7 +218,7 @@ type OtherTestScript TestScript
 		OtherTestScript
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherTestScript: OtherTestScript(r),
+		OtherTestScript: OtherTestScript(*r),
 		ResourceType:    "TestScript",
 	})
 }

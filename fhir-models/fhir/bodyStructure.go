@@ -45,7 +45,7 @@ type OtherBodyStructure BodyStructure
 		OtherBodyStructure
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherBodyStructure: OtherBodyStructure(r),
+		OtherBodyStructure: OtherBodyStructure(*r),
 		ResourceType:       "BodyStructure",
 	})
 }

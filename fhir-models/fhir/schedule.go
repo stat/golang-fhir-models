@@ -45,7 +45,7 @@ type OtherSchedule Schedule
 		OtherSchedule
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherSchedule: OtherSchedule(r),
+		OtherSchedule: OtherSchedule(*r),
 		ResourceType:  "Schedule",
 	})
 }

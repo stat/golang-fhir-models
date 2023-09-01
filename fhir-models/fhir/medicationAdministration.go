@@ -77,7 +77,7 @@ type OtherMedicationAdministration MedicationAdministration
 		OtherMedicationAdministration
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherMedicationAdministration: OtherMedicationAdministration(r),
+		OtherMedicationAdministration: OtherMedicationAdministration(*r),
 		ResourceType:                  "MedicationAdministration",
 	})
 }

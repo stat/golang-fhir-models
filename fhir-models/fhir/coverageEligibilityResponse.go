@@ -99,7 +99,7 @@ type OtherCoverageEligibilityResponse CoverageEligibilityResponse
 		OtherCoverageEligibilityResponse
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherCoverageEligibilityResponse: OtherCoverageEligibilityResponse(r),
+		OtherCoverageEligibilityResponse: OtherCoverageEligibilityResponse(*r),
 		ResourceType:                     "CoverageEligibilityResponse",
 	})
 }

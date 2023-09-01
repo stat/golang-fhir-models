@@ -72,7 +72,7 @@ type OtherObservationDefinition ObservationDefinition
 		OtherObservationDefinition
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherObservationDefinition: OtherObservationDefinition(r),
+		OtherObservationDefinition: OtherObservationDefinition(*r),
 		ResourceType:               "ObservationDefinition",
 	})
 }

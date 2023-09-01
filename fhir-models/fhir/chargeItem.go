@@ -73,7 +73,7 @@ type OtherChargeItem ChargeItem
 		OtherChargeItem
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherChargeItem: OtherChargeItem(r),
+		OtherChargeItem: OtherChargeItem(*r),
 		ResourceType:    "ChargeItem",
 	})
 }

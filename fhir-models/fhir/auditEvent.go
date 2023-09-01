@@ -101,7 +101,7 @@ type OtherAuditEvent AuditEvent
 		OtherAuditEvent
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherAuditEvent: OtherAuditEvent(r),
+		OtherAuditEvent: OtherAuditEvent(*r),
 		ResourceType:    "AuditEvent",
 	})
 }

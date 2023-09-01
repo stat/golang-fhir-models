@@ -97,12 +97,12 @@ type ImmunizationProtocolApplied struct {
 type OtherImmunization Immunization
 
 // MarshalJSON marshals the given Immunization as JSON into a byte slice
- func (r *Immunization)MarshalJSON() ([]byte, error) {
+func (r *Immunization) MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherImmunization
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherImmunization: OtherImmunization(r),
+		OtherImmunization: OtherImmunization(*r),
 		ResourceType:      "Immunization",
 	})
 }

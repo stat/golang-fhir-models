@@ -37,7 +37,7 @@ type OtherBinary Binary
 		OtherBinary
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherBinary:  OtherBinary(r),
+		OtherBinary:  OtherBinary(*r),
 		ResourceType: "Binary",
 	})
 }

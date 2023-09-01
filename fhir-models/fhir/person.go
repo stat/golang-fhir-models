@@ -49,12 +49,12 @@ type PersonLink struct {
 type OtherPerson Person
 
 // MarshalJSON marshals the given Person as JSON into a byte slice
- func (r *Person)MarshalJSON() ([]byte, error) {
+func (r *Person) MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherPerson
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherPerson:  OtherPerson(r),
+		OtherPerson:  OtherPerson(*r),
 		ResourceType: "Person",
 	})
 }

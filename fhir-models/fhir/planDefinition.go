@@ -155,12 +155,12 @@ type PlanDefinitionActionDynamicValue struct {
 type OtherPlanDefinition PlanDefinition
 
 // MarshalJSON marshals the given PlanDefinition as JSON into a byte slice
- func (r *PlanDefinition)MarshalJSON() ([]byte, error) {
+func (r *PlanDefinition) MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherPlanDefinition
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherPlanDefinition: OtherPlanDefinition(r),
+		OtherPlanDefinition: OtherPlanDefinition(*r),
 		ResourceType:        "PlanDefinition",
 	})
 }

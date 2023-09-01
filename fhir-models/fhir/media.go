@@ -55,12 +55,12 @@ type Media struct {
 type OtherMedia Media
 
 // MarshalJSON marshals the given Media as JSON into a byte slice
- func (r *Media)MarshalJSON() ([]byte, error) {
+func (r *Media) MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherMedia
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherMedia:   OtherMedia(r),
+		OtherMedia:   OtherMedia(*r),
 		ResourceType: "Media",
 	})
 }

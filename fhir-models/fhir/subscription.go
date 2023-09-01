@@ -53,7 +53,7 @@ type OtherSubscription Subscription
 		OtherSubscription
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherSubscription: OtherSubscription(r),
+		OtherSubscription: OtherSubscription(*r),
 		ResourceType:      "Subscription",
 	})
 }

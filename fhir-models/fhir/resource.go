@@ -34,7 +34,7 @@ type OtherResource Resource
 		OtherResource
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherResource: OtherResource(r),
+		OtherResource: OtherResource(*r),
 		ResourceType:  "Resource",
 	})
 }

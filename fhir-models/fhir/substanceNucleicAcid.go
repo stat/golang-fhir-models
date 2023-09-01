@@ -72,7 +72,7 @@ type OtherSubstanceNucleicAcid SubstanceNucleicAcid
 		OtherSubstanceNucleicAcid
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherSubstanceNucleicAcid: OtherSubstanceNucleicAcid(r),
+		OtherSubstanceNucleicAcid: OtherSubstanceNucleicAcid(*r),
 		ResourceType:              "SubstanceNucleicAcid",
 	})
 }

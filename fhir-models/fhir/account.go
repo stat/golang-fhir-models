@@ -63,7 +63,7 @@ type OtherAccount Account
 		OtherAccount
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherAccount: OtherAccount(r),
+		OtherAccount: OtherAccount(*r),
 		ResourceType: "Account",
 	})
 }

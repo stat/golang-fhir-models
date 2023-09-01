@@ -48,7 +48,7 @@ type OtherSlot Slot
 		OtherSlot
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherSlot:    OtherSlot(r),
+		OtherSlot:    OtherSlot(*r),
 		ResourceType: "Slot",
 	})
 }

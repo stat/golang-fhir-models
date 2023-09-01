@@ -71,12 +71,12 @@ type ResearchStudyObjective struct {
 type OtherResearchStudy ResearchStudy
 
 // MarshalJSON marshals the given ResearchStudy as JSON into a byte slice
- func (r *ResearchStudy)MarshalJSON() ([]byte, error) {
+func (r *ResearchStudy) MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherResearchStudy
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherResearchStudy: OtherResearchStudy(r),
+		OtherResearchStudy: OtherResearchStudy(*r),
 		ResourceType:       "ResearchStudy",
 	})
 }

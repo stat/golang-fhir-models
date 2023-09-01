@@ -78,7 +78,7 @@ type OtherMedicinalProductPharmaceutical MedicinalProductPharmaceutical
 		OtherMedicinalProductPharmaceutical
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherMedicinalProductPharmaceutical: OtherMedicinalProductPharmaceutical(r),
+		OtherMedicinalProductPharmaceutical: OtherMedicinalProductPharmaceutical(*r),
 		ResourceType:                        "MedicinalProductPharmaceutical",
 	})
 }

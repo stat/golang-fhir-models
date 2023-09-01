@@ -69,7 +69,7 @@ type OtherGoal Goal
 		OtherGoal
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherGoal:    OtherGoal(r),
+		OtherGoal:    OtherGoal(*r),
 		ResourceType: "Goal",
 	})
 }

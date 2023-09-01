@@ -52,7 +52,7 @@ type OtherMedicinalProductContraindication MedicinalProductContraindication
 		OtherMedicinalProductContraindication
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherMedicinalProductContraindication: OtherMedicinalProductContraindication(r),
+		OtherMedicinalProductContraindication: OtherMedicinalProductContraindication(*r),
 		ResourceType:                          "MedicinalProductContraindication",
 	})
 }

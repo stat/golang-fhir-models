@@ -60,7 +60,7 @@ type OtherSubstance Substance
 		OtherSubstance
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherSubstance: OtherSubstance(r),
+		OtherSubstance: OtherSubstance(*r),
 		ResourceType:   "Substance",
 	})
 }

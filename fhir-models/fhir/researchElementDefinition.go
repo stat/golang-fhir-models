@@ -97,7 +97,7 @@ type OtherResearchElementDefinition ResearchElementDefinition
 		OtherResearchElementDefinition
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherResearchElementDefinition: OtherResearchElementDefinition(r),
+		OtherResearchElementDefinition: OtherResearchElementDefinition(*r),
 		ResourceType:                   "ResearchElementDefinition",
 	})
 }

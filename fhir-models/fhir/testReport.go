@@ -113,7 +113,7 @@ type OtherTestReport TestReport
 		OtherTestReport
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherTestReport: OtherTestReport(r),
+		OtherTestReport: OtherTestReport(*r),
 		ResourceType:    "TestReport",
 	})
 }

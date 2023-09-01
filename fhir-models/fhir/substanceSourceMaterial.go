@@ -103,7 +103,7 @@ type OtherSubstanceSourceMaterial SubstanceSourceMaterial
 		OtherSubstanceSourceMaterial
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherSubstanceSourceMaterial: OtherSubstanceSourceMaterial(r),
+		OtherSubstanceSourceMaterial: OtherSubstanceSourceMaterial(*r),
 		ResourceType:                 "SubstanceSourceMaterial",
 	})
 }

@@ -261,7 +261,7 @@ type OtherContract Contract
 		OtherContract
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherContract: OtherContract(r),
+		OtherContract: OtherContract(*r),
 		ResourceType:  "Contract",
 	})
 }

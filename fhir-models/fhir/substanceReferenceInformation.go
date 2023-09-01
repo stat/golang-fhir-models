@@ -82,7 +82,7 @@ type OtherSubstanceReferenceInformation SubstanceReferenceInformation
 		OtherSubstanceReferenceInformation
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherSubstanceReferenceInformation: OtherSubstanceReferenceInformation(r),
+		OtherSubstanceReferenceInformation: OtherSubstanceReferenceInformation(*r),
 		ResourceType:                       "SubstanceReferenceInformation",
 	})
 }

@@ -49,7 +49,7 @@ type OtherPaymentNotice PaymentNotice
 		OtherPaymentNotice
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherPaymentNotice: OtherPaymentNotice(r),
+		OtherPaymentNotice: OtherPaymentNotice(*r),
 		ResourceType:       "PaymentNotice",
 	})
 }

@@ -56,12 +56,12 @@ type MedicationBatch struct {
 type OtherMedication Medication
 
 // MarshalJSON marshals the given Medication as JSON into a byte slice
- func (r *Medication)MarshalJSON() ([]byte, error) {
+func (r *Medication) MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherMedication
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherMedication: OtherMedication(r),
+		OtherMedication: OtherMedication(*r),
 		ResourceType:    "Medication",
 	})
 }

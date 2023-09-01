@@ -65,7 +65,7 @@ type OtherEvidence Evidence
 		OtherEvidence
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherEvidence: OtherEvidence(r),
+		OtherEvidence: OtherEvidence(*r),
 		ResourceType:  "Evidence",
 	})
 }

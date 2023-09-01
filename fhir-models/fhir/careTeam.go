@@ -59,7 +59,7 @@ type OtherCareTeam CareTeam
 		OtherCareTeam
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherCareTeam: OtherCareTeam(r),
+		OtherCareTeam: OtherCareTeam(*r),
 		ResourceType:  "CareTeam",
 	})
 }

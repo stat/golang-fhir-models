@@ -49,7 +49,7 @@ type OtherOrganizationAffiliation OrganizationAffiliation
 		OtherOrganizationAffiliation
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherOrganizationAffiliation: OtherOrganizationAffiliation(r),
+		OtherOrganizationAffiliation: OtherOrganizationAffiliation(*r),
 		ResourceType:                 "OrganizationAffiliation",
 	})
 }

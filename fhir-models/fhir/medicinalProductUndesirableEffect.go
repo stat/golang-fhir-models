@@ -37,12 +37,12 @@ type MedicinalProductUndesirableEffect struct {
 type OtherMedicinalProductUndesirableEffect MedicinalProductUndesirableEffect
 
 // MarshalJSON marshals the given MedicinalProductUndesirableEffect as JSON into a byte slice
- func (r *MedicinalProductUndesirableEffect)MarshalJSON() ([]byte, error) {
+func (r *MedicinalProductUndesirableEffect) MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherMedicinalProductUndesirableEffect
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherMedicinalProductUndesirableEffect: OtherMedicinalProductUndesirableEffect(r),
+		OtherMedicinalProductUndesirableEffect: OtherMedicinalProductUndesirableEffect(*r),
 		ResourceType:                           "MedicinalProductUndesirableEffect",
 	})
 }

@@ -56,7 +56,7 @@ type OtherOrganization Organization
 		OtherOrganization
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherOrganization: OtherOrganization(r),
+		OtherOrganization: OtherOrganization(*r),
 		ResourceType:      "Organization",
 	})
 }

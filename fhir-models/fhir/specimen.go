@@ -86,7 +86,7 @@ type OtherSpecimen Specimen
 		OtherSpecimen
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherSpecimen: OtherSpecimen(r),
+		OtherSpecimen: OtherSpecimen(*r),
 		ResourceType:  "Specimen",
 	})
 }

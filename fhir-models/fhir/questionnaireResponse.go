@@ -76,7 +76,7 @@ type OtherQuestionnaireResponse QuestionnaireResponse
 		OtherQuestionnaireResponse
 		ResourceType string `json:"resourceType"`
 	}{
-		OtherQuestionnaireResponse: OtherQuestionnaireResponse(r),
+		OtherQuestionnaireResponse: OtherQuestionnaireResponse(*r),
 		ResourceType:               "QuestionnaireResponse",
 	})
 }
