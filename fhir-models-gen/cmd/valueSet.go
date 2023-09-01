@@ -3,9 +3,10 @@ package cmd
 import (
 	"errors"
 	"fmt"
+	"strings"
+
 	"github.com/dave/jennifer/jen"
 	"github.com/samply/golang-fhir-models/fhir-models-gen/fhir"
-	"strings"
 )
 
 func generateValueSet(resources ResourceMap, valueSet fhir.ValueSet) (*jen.File, error) {
@@ -50,9 +51,42 @@ func generateValueSet(resources ResourceMap, valueSet fhir.ValueSet) (*jen.File,
 	file.Type().Id(*valueSet.Name).Int()
 	file.Const().DefsFunc(constsRoot(*valueSet.Name, codeSystem.Concept))
 
+	file.Func().
+		Params(jen.Id("code").Op("*").Id(*valueSet.Name)).
+		Id("MarshalBSONValue").
+		Params().
+		Params(jen.Id("bsontype.Type"), jen.Op("[]").Byte(), jen.Error()).
+		Block(
+			jen.Return(jen.Qual("go.mongodb.org/mongo-driver/bson", "MarshalValue").Call(jen.Id("code").Op(".").Id("Code").Call())),
+		)
+
+	file.Func().
+		Params(jen.Id("code").Op("*").Id(*valueSet.Name)).
+		Id("UnmarshalBSONValue").
+		Params(jen.Id("t").Qual("go.mongodb.org/mongo-driver/bson/bsontype", "Type"), jen.Id("bytes").Op("[]").Byte()).
+		Params(jen.Error()).
+		Block(
+			jen.If(jen.Id("t").Op("!=").Id("bsontype.String")).Block(
+				jen.Id("err").Op(":=").Qual("fmt", "Errorf").Call(jen.Lit("UnmarshalBSONValue error: cannot unmarshal non string value")),
+				jen.Return(jen.Id("err")),
+			),
+			jen.Id("reader").Op(":=").Qual("go.mongodb.org/mongo-driver/bson/bsonrw", "NewBSONValueReader").Call(jen.Id("t"), jen.Id("bytes")),
+			jen.Id("decoder").Op(",").Id("err").Op(":=").Qual("go.mongodb.org/mongo-driver/bson", "NewDecoder").Call(jen.Id("reader")),
+			jen.If(jen.Id("err").Op("!=").Nil()).Block(
+				jen.Return(jen.Id("err")),
+			),
+			jen.Var().Id("s").String(),
+			jen.Id("err").Op("=").Id("decoder").Op(".").Id("Decode").Call(jen.Op("&").Id("s")),
+			jen.If(jen.Id("err").Op("!=").Nil()).Block(
+				jen.Return(jen.Id("err")),
+			),
+			jen.Switch(jen.Id("s")).BlockFunc(unmarshalRoot(*valueSet.Name, codeSystem.Concept)),
+			jen.Return(jen.Id("nil")),
+		)
+
 	// MarshalJSON function
 	file.Func().
-		Params(jen.Id("code").Id(*valueSet.Name)).
+		Params(jen.Id("code").Op("*").Id(*valueSet.Name)).
 		Id("MarshalJSON").
 		Params().
 		Params(jen.Op("[]").Byte(), jen.Error()).
