@@ -32,7 +32,7 @@ const (
 	TestReportParticipantTypeServer
 )
 
-func (code TestReportParticipantType) MarshalJSON() ([]byte, error) {
+ func (code *TestReportParticipantType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *TestReportParticipantType) UnmarshalJSON(json []byte) error {

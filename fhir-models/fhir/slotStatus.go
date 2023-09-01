@@ -34,7 +34,7 @@ const (
 	SlotStatusEnteredInError
 )
 
-func (code SlotStatus) MarshalJSON() ([]byte, error) {
+ func (code *SlotStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *SlotStatus) UnmarshalJSON(json []byte) error {

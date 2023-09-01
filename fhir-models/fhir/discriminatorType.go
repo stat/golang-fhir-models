@@ -34,7 +34,7 @@ const (
 	DiscriminatorTypeProfile
 )
 
-func (code DiscriminatorType) MarshalJSON() ([]byte, error) {
+ func (code *DiscriminatorType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *DiscriminatorType) UnmarshalJSON(json []byte) error {

@@ -177,7 +177,7 @@ const (
 	CarePlanActivityKindVisionPrescription
 )
 
-func (code CarePlanActivityKind) MarshalJSON() ([]byte, error) {
+ func (code *CarePlanActivityKind)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *CarePlanActivityKind) UnmarshalJSON(json []byte) error {

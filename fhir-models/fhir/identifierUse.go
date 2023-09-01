@@ -34,7 +34,7 @@ const (
 	IdentifierUseOld
 )
 
-func (code IdentifierUse) MarshalJSON() ([]byte, error) {
+ func (code *IdentifierUse)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *IdentifierUse) UnmarshalJSON(json []byte) error {

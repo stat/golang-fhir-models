@@ -31,7 +31,7 @@ const (
 	StructureMapContextTypeVariable
 )
 
-func (code StructureMapContextType) MarshalJSON() ([]byte, error) {
+ func (code *StructureMapContextType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *StructureMapContextType) UnmarshalJSON(json []byte) error {

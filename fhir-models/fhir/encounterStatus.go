@@ -38,7 +38,7 @@ const (
 	EncounterStatusUnknown
 )
 
-func (code EncounterStatus) MarshalJSON() ([]byte, error) {
+ func (code *EncounterStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *EncounterStatus) UnmarshalJSON(json []byte) error {

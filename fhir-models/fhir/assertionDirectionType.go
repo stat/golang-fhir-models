@@ -31,7 +31,7 @@ const (
 	AssertionDirectionTypeRequest
 )
 
-func (code AssertionDirectionType) MarshalJSON() ([]byte, error) {
+ func (code *AssertionDirectionType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *AssertionDirectionType) UnmarshalJSON(json []byte) error {

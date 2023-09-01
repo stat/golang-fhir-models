@@ -31,7 +31,7 @@ const (
 	OperationParameterUseOut
 )
 
-func (code OperationParameterUse) MarshalJSON() ([]byte, error) {
+ func (code *OperationParameterUse)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *OperationParameterUse) UnmarshalJSON(json []byte) error {

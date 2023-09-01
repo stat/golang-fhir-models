@@ -32,7 +32,7 @@ const (
 	EvidenceVariableTypeDescriptive
 )
 
-func (code EvidenceVariableType) MarshalJSON() ([]byte, error) {
+ func (code *EvidenceVariableType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *EvidenceVariableType) UnmarshalJSON(json []byte) error {

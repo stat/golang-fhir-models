@@ -31,7 +31,7 @@ const (
 	ActionPrecheckBehaviorNo
 )
 
-func (code ActionPrecheckBehavior) MarshalJSON() ([]byte, error) {
+ func (code *ActionPrecheckBehavior)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ActionPrecheckBehavior) UnmarshalJSON(json []byte) error {

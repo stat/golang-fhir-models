@@ -33,7 +33,7 @@ const (
 	CompositionStatusEnteredInError
 )
 
-func (code CompositionStatus) MarshalJSON() ([]byte, error) {
+ func (code *CompositionStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *CompositionStatus) UnmarshalJSON(json []byte) error {

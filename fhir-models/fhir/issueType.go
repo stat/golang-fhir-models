@@ -60,7 +60,7 @@ const (
 	IssueTypeInformational
 )
 
-func (code IssueType) MarshalJSON() ([]byte, error) {
+ func (code *IssueType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *IssueType) UnmarshalJSON(json []byte) error {

@@ -85,7 +85,7 @@ type ImagingStudySeriesInstance struct {
 type OtherImagingStudy ImagingStudy
 
 // MarshalJSON marshals the given ImagingStudy as JSON into a byte slice
-func (r ImagingStudy) MarshalJSON() ([]byte, error) {
+ func (r *ImagingStudy)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherImagingStudy
 		ResourceType string `json:"resourceType"`

@@ -32,7 +32,7 @@ const (
 	DocumentReferenceStatusEnteredInError
 )
 
-func (code DocumentReferenceStatus) MarshalJSON() ([]byte, error) {
+ func (code *DocumentReferenceStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *DocumentReferenceStatus) UnmarshalJSON(json []byte) error {

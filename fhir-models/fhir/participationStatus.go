@@ -33,7 +33,7 @@ const (
 	ParticipationStatusNeedsAction
 )
 
-func (code ParticipationStatus) MarshalJSON() ([]byte, error) {
+ func (code *ParticipationStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ParticipationStatus) UnmarshalJSON(json []byte) error {

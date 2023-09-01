@@ -33,7 +33,7 @@ const (
 	FinancialResourceStatusCodesEnteredInError
 )
 
-func (code FinancialResourceStatusCodes) MarshalJSON() ([]byte, error) {
+ func (code *FinancialResourceStatusCodes)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *FinancialResourceStatusCodes) UnmarshalJSON(json []byte) error {

@@ -78,7 +78,7 @@ type GraphDefinitionLinkTargetCompartment struct {
 type OtherGraphDefinition GraphDefinition
 
 // MarshalJSON marshals the given GraphDefinition as JSON into a byte slice
-func (r GraphDefinition) MarshalJSON() ([]byte, error) {
+ func (r *GraphDefinition)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherGraphDefinition
 		ResourceType string `json:"resourceType"`

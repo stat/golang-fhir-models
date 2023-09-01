@@ -38,7 +38,7 @@ const (
 	ActionRelationshipTypeAfterEnd
 )
 
-func (code ActionRelationshipType) MarshalJSON() ([]byte, error) {
+ func (code *ActionRelationshipType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ActionRelationshipType) UnmarshalJSON(json []byte) error {

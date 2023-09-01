@@ -32,7 +32,7 @@ const (
 	AggregationModeBundled
 )
 
-func (code AggregationMode) MarshalJSON() ([]byte, error) {
+ func (code *AggregationMode)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *AggregationMode) UnmarshalJSON(json []byte) error {

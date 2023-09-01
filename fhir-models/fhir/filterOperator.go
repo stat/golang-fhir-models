@@ -38,7 +38,7 @@ const (
 	FilterOperatorExists
 )
 
-func (code FilterOperator) MarshalJSON() ([]byte, error) {
+ func (code *FilterOperator)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *FilterOperator) UnmarshalJSON(json []byte) error {

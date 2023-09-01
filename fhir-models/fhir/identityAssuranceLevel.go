@@ -33,7 +33,7 @@ const (
 	IdentityAssuranceLevelLevel4
 )
 
-func (code IdentityAssuranceLevel) MarshalJSON() ([]byte, error) {
+ func (code *IdentityAssuranceLevel)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *IdentityAssuranceLevel) UnmarshalJSON(json []byte) error {

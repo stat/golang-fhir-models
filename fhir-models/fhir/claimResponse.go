@@ -193,7 +193,7 @@ type ClaimResponseError struct {
 type OtherClaimResponse ClaimResponse
 
 // MarshalJSON marshals the given ClaimResponse as JSON into a byte slice
-func (r ClaimResponse) MarshalJSON() ([]byte, error) {
+ func (r *ClaimResponse)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherClaimResponse
 		ResourceType string `json:"resourceType"`

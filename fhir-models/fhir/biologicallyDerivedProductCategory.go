@@ -34,7 +34,7 @@ const (
 	BiologicallyDerivedProductCategoryBiologicalAgent
 )
 
-func (code BiologicallyDerivedProductCategory) MarshalJSON() ([]byte, error) {
+ func (code *BiologicallyDerivedProductCategory)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *BiologicallyDerivedProductCategory) UnmarshalJSON(json []byte) error {

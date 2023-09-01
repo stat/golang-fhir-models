@@ -33,7 +33,7 @@ const (
 	GuidePageGenerationGenerated
 )
 
-func (code GuidePageGeneration) MarshalJSON() ([]byte, error) {
+ func (code *GuidePageGeneration)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *GuidePageGeneration) UnmarshalJSON(json []byte) error {

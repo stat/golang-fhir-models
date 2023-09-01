@@ -47,7 +47,7 @@ type DeviceUseStatement struct {
 type OtherDeviceUseStatement DeviceUseStatement
 
 // MarshalJSON marshals the given DeviceUseStatement as JSON into a byte slice
-func (r DeviceUseStatement) MarshalJSON() ([]byte, error) {
+ func (r *DeviceUseStatement)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherDeviceUseStatement
 		ResourceType string `json:"resourceType"`

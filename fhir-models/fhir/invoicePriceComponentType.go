@@ -35,7 +35,7 @@ const (
 	InvoicePriceComponentTypeInformational
 )
 
-func (code InvoicePriceComponentType) MarshalJSON() ([]byte, error) {
+ func (code *InvoicePriceComponentType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *InvoicePriceComponentType) UnmarshalJSON(json []byte) error {

@@ -41,7 +41,7 @@ const (
 	SearchModifierCodeOfType
 )
 
-func (code SearchModifierCode) MarshalJSON() ([]byte, error) {
+ func (code *SearchModifierCode)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *SearchModifierCode) UnmarshalJSON(json []byte) error {

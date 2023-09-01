@@ -32,7 +32,7 @@ const (
 	MessageSignificanceCategoryNotification
 )
 
-func (code MessageSignificanceCategory) MarshalJSON() ([]byte, error) {
+ func (code *MessageSignificanceCategory)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *MessageSignificanceCategory) UnmarshalJSON(json []byte) error {

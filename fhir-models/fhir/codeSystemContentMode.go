@@ -34,7 +34,7 @@ const (
 	CodeSystemContentModeSupplement
 )
 
-func (code CodeSystemContentMode) MarshalJSON() ([]byte, error) {
+ func (code *CodeSystemContentMode)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *CodeSystemContentMode) UnmarshalJSON(json []byte) error {

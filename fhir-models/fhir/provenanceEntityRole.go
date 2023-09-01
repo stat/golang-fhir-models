@@ -34,7 +34,7 @@ const (
 	ProvenanceEntityRoleRemoval
 )
 
-func (code ProvenanceEntityRole) MarshalJSON() ([]byte, error) {
+ func (code *ProvenanceEntityRole)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ProvenanceEntityRole) UnmarshalJSON(json []byte) error {

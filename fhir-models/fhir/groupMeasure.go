@@ -35,7 +35,7 @@ const (
 	GroupMeasureMedianOfMedian
 )
 
-func (code GroupMeasure) MarshalJSON() ([]byte, error) {
+ func (code *GroupMeasure)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *GroupMeasure) UnmarshalJSON(json []byte) error {

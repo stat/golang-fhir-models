@@ -38,7 +38,7 @@ const (
 	RequestIntentOption
 )
 
-func (code RequestIntent) MarshalJSON() ([]byte, error) {
+ func (code *RequestIntent)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *RequestIntent) UnmarshalJSON(json []byte) error {

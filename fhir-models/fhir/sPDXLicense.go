@@ -375,7 +375,7 @@ const (
 	SPDXLicenseZPL2_1
 )
 
-func (code SPDXLicense) MarshalJSON() ([]byte, error) {
+ func (code *SPDXLicense)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *SPDXLicense) UnmarshalJSON(json []byte) error {

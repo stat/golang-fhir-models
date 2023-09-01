@@ -32,7 +32,7 @@ const (
 	CapabilityStatementKindRequirements
 )
 
-func (code CapabilityStatementKind) MarshalJSON() ([]byte, error) {
+ func (code *CapabilityStatementKind)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *CapabilityStatementKind) UnmarshalJSON(json []byte) error {

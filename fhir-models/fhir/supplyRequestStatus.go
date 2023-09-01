@@ -36,7 +36,7 @@ const (
 	SupplyRequestStatusUnknown
 )
 
-func (code SupplyRequestStatus) MarshalJSON() ([]byte, error) {
+ func (code *SupplyRequestStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *SupplyRequestStatus) UnmarshalJSON(json []byte) error {

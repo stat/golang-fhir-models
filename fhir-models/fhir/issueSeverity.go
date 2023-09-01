@@ -33,7 +33,7 @@ const (
 	IssueSeverityInformation
 )
 
-func (code IssueSeverity) MarshalJSON() ([]byte, error) {
+ func (code *IssueSeverity)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *IssueSeverity) UnmarshalJSON(json []byte) error {

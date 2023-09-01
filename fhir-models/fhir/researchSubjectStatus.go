@@ -42,7 +42,7 @@ const (
 	ResearchSubjectStatusWithdrawn
 )
 
-func (code ResearchSubjectStatus) MarshalJSON() ([]byte, error) {
+ func (code *ResearchSubjectStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ResearchSubjectStatus) UnmarshalJSON(json []byte) error {

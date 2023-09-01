@@ -48,7 +48,7 @@ type SubscriptionChannel struct {
 type OtherSubscription Subscription
 
 // MarshalJSON marshals the given Subscription as JSON into a byte slice
-func (r Subscription) MarshalJSON() ([]byte, error) {
+ func (r *Subscription)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherSubscription
 		ResourceType string `json:"resourceType"`

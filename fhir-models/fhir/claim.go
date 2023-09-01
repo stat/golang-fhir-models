@@ -205,7 +205,7 @@ type ClaimItemDetailSubDetail struct {
 type OtherClaim Claim
 
 // MarshalJSON marshals the given Claim as JSON into a byte slice
-func (r Claim) MarshalJSON() ([]byte, error) {
+ func (r *Claim)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherClaim
 		ResourceType string `json:"resourceType"`

@@ -79,7 +79,7 @@ type ProcedureFocalDevice struct {
 type OtherProcedure Procedure
 
 // MarshalJSON marshals the given Procedure as JSON into a byte slice
-func (r Procedure) MarshalJSON() ([]byte, error) {
+ func (r *Procedure)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherProcedure
 		ResourceType string `json:"resourceType"`

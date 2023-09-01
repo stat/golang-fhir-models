@@ -35,7 +35,7 @@ const (
 	UDIEntryTypeUnknown
 )
 
-func (code UDIEntryType) MarshalJSON() ([]byte, error) {
+ func (code *UDIEntryType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *UDIEntryType) UnmarshalJSON(json []byte) error {

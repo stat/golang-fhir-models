@@ -31,7 +31,7 @@ const (
 	VisionEyesLeft
 )
 
-func (code VisionEyes) MarshalJSON() ([]byte, error) {
+ func (code *VisionEyes)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *VisionEyes) UnmarshalJSON(json []byte) error {

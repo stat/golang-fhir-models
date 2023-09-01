@@ -33,7 +33,7 @@ const (
 	ActionParticipantTypeDevice
 )
 
-func (code ActionParticipantType) MarshalJSON() ([]byte, error) {
+ func (code *ActionParticipantType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ActionParticipantType) UnmarshalJSON(json []byte) error {

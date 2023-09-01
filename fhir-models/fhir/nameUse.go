@@ -36,7 +36,7 @@ const (
 	NameUseMaiden
 )
 
-func (code NameUse) MarshalJSON() ([]byte, error) {
+ func (code *NameUse)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *NameUse) UnmarshalJSON(json []byte) error {

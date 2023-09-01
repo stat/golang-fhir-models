@@ -32,7 +32,7 @@ const (
 	BiologicallyDerivedProductStorageScaleKelvin
 )
 
-func (code BiologicallyDerivedProductStorageScale) MarshalJSON() ([]byte, error) {
+ func (code *BiologicallyDerivedProductStorageScale)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *BiologicallyDerivedProductStorageScale) UnmarshalJSON(json []byte) error {

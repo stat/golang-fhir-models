@@ -31,7 +31,7 @@ const (
 	ExposureStateExposureAlternative
 )
 
-func (code ExposureState) MarshalJSON() ([]byte, error) {
+ func (code *ExposureState)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ExposureState) UnmarshalJSON(json []byte) error {

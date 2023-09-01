@@ -36,7 +36,7 @@ const (
 	ContactPointSystemOther
 )
 
-func (code ContactPointSystem) MarshalJSON() ([]byte, error) {
+ func (code *ContactPointSystem)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ContactPointSystem) UnmarshalJSON(json []byte) error {

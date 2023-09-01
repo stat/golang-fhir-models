@@ -33,7 +33,7 @@ const (
 	ClaimProcessingCodesPartial
 )
 
-func (code ClaimProcessingCodes) MarshalJSON() ([]byte, error) {
+ func (code *ClaimProcessingCodes)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ClaimProcessingCodes) UnmarshalJSON(json []byte) error {

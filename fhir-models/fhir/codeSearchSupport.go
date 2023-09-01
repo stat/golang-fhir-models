@@ -31,7 +31,7 @@ const (
 	CodeSearchSupportAll
 )
 
-func (code CodeSearchSupport) MarshalJSON() ([]byte, error) {
+ func (code *CodeSearchSupport)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *CodeSearchSupport) UnmarshalJSON(json []byte) error {

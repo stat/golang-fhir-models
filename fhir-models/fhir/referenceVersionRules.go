@@ -32,7 +32,7 @@ const (
 	ReferenceVersionRulesSpecific
 )
 
-func (code ReferenceVersionRules) MarshalJSON() ([]byte, error) {
+ func (code *ReferenceVersionRules)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ReferenceVersionRules) UnmarshalJSON(json []byte) error {

@@ -34,7 +34,7 @@ const (
 	PropertyRepresentationXhtml
 )
 
-func (code PropertyRepresentation) MarshalJSON() ([]byte, error) {
+ func (code *PropertyRepresentation)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *PropertyRepresentation) UnmarshalJSON(json []byte) error {

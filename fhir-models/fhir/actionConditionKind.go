@@ -32,7 +32,7 @@ const (
 	ActionConditionKindStop
 )
 
-func (code ActionConditionKind) MarshalJSON() ([]byte, error) {
+ func (code *ActionConditionKind)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ActionConditionKind) UnmarshalJSON(json []byte) error {

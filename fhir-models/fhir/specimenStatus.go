@@ -33,7 +33,7 @@ const (
 	SpecimenStatusEnteredInError
 )
 
-func (code SpecimenStatus) MarshalJSON() ([]byte, error) {
+ func (code *SpecimenStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *SpecimenStatus) UnmarshalJSON(json []byte) error {

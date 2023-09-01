@@ -32,7 +32,7 @@ const (
 	TestReportResultPending
 )
 
-func (code TestReportResult) MarshalJSON() ([]byte, error) {
+ func (code *TestReportResult)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *TestReportResult) UnmarshalJSON(json []byte) error {

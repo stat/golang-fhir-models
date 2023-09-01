@@ -31,7 +31,7 @@ const (
 	OperationKindQuery
 )
 
-func (code OperationKind) MarshalJSON() ([]byte, error) {
+ func (code *OperationKind)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *OperationKind) UnmarshalJSON(json []byte) error {

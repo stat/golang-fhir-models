@@ -33,7 +33,7 @@ const (
 	NamingSystemIdentifierTypeOther
 )
 
-func (code NamingSystemIdentifierType) MarshalJSON() ([]byte, error) {
+ func (code *NamingSystemIdentifierType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *NamingSystemIdentifierType) UnmarshalJSON(json []byte) error {

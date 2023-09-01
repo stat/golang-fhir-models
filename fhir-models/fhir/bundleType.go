@@ -38,7 +38,7 @@ const (
 	BundleTypeCollection
 )
 
-func (code BundleType) MarshalJSON() ([]byte, error) {
+ func (code *BundleType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *BundleType) UnmarshalJSON(json []byte) error {

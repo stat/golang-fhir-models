@@ -34,7 +34,7 @@ const (
 	AddressUseBilling
 )
 
-func (code AddressUse) MarshalJSON() ([]byte, error) {
+ func (code *AddressUse)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *AddressUse) UnmarshalJSON(json []byte) error {

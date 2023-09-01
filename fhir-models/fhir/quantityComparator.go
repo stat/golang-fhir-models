@@ -33,7 +33,7 @@ const (
 	QuantityComparatorGreaterThan
 )
 
-func (code QuantityComparator) MarshalJSON() ([]byte, error) {
+ func (code *QuantityComparator)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *QuantityComparator) UnmarshalJSON(json []byte) error {

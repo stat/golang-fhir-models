@@ -36,7 +36,7 @@ const (
 	TestScriptRequestMethodCodeHead
 )
 
-func (code TestScriptRequestMethodCode) MarshalJSON() ([]byte, error) {
+ func (code *TestScriptRequestMethodCode)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *TestScriptRequestMethodCode) UnmarshalJSON(json []byte) error {

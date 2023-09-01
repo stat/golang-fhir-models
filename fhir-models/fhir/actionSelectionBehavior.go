@@ -35,7 +35,7 @@ const (
 	ActionSelectionBehaviorOneOrMore
 )
 
-func (code ActionSelectionBehavior) MarshalJSON() ([]byte, error) {
+ func (code *ActionSelectionBehavior)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ActionSelectionBehavior) UnmarshalJSON(json []byte) error {

@@ -32,7 +32,7 @@ const (
 	NamingSystemTypeRoot
 )
 
-func (code NamingSystemType) MarshalJSON() ([]byte, error) {
+ func (code *NamingSystemType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *NamingSystemType) UnmarshalJSON(json []byte) error {

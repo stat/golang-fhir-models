@@ -38,7 +38,7 @@ const (
 	CarePlanIntentOption
 )
 
-func (code CarePlanIntent) MarshalJSON() ([]byte, error) {
+ func (code *CarePlanIntent)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *CarePlanIntent) UnmarshalJSON(json []byte) error {

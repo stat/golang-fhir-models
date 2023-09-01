@@ -34,7 +34,7 @@ const (
 	AccountStatusUnknown
 )
 
-func (code AccountStatus) MarshalJSON() ([]byte, error) {
+ func (code *AccountStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *AccountStatus) UnmarshalJSON(json []byte) error {

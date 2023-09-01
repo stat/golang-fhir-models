@@ -31,7 +31,7 @@ const (
 	DocumentModeConsumer
 )
 
-func (code DocumentMode) MarshalJSON() ([]byte, error) {
+ func (code *DocumentMode)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *DocumentMode) UnmarshalJSON(json []byte) error {

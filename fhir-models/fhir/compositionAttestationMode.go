@@ -33,7 +33,7 @@ const (
 	CompositionAttestationModeOfficial
 )
 
-func (code CompositionAttestationMode) MarshalJSON() ([]byte, error) {
+ func (code *CompositionAttestationMode)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *CompositionAttestationMode) UnmarshalJSON(json []byte) error {

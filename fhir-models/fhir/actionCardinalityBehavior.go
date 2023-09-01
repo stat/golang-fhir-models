@@ -31,7 +31,7 @@ const (
 	ActionCardinalityBehaviorMultiple
 )
 
-func (code ActionCardinalityBehavior) MarshalJSON() ([]byte, error) {
+ func (code *ActionCardinalityBehavior)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ActionCardinalityBehavior) UnmarshalJSON(json []byte) error {

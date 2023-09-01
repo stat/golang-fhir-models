@@ -33,7 +33,7 @@ const (
 	LinkTypeSeealso
 )
 
-func (code LinkType) MarshalJSON() ([]byte, error) {
+ func (code *LinkType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *LinkType) UnmarshalJSON(json []byte) error {

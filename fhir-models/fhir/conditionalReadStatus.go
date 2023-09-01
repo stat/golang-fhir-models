@@ -33,7 +33,7 @@ const (
 	ConditionalReadStatusFullSupport
 )
 
-func (code ConditionalReadStatus) MarshalJSON() ([]byte, error) {
+ func (code *ConditionalReadStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ConditionalReadStatus) UnmarshalJSON(json []byte) error {

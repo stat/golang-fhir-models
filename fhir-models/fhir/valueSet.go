@@ -130,7 +130,7 @@ type ValueSetExpansionContains struct {
 type OtherValueSet ValueSet
 
 // MarshalJSON marshals the given ValueSet as JSON into a byte slice
-func (r ValueSet) MarshalJSON() ([]byte, error) {
+ func (r *ValueSet)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherValueSet
 		ResourceType string `json:"resourceType"`

@@ -32,7 +32,7 @@ const (
 	NoteTypePrintoper
 )
 
-func (code NoteType) MarshalJSON() ([]byte, error) {
+ func (code *NoteType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *NoteType) UnmarshalJSON(json []byte) error {

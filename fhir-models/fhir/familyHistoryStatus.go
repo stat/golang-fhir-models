@@ -33,7 +33,7 @@ const (
 	FamilyHistoryStatusHealthUnknown
 )
 
-func (code FamilyHistoryStatus) MarshalJSON() ([]byte, error) {
+ func (code *FamilyHistoryStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *FamilyHistoryStatus) UnmarshalJSON(json []byte) error {

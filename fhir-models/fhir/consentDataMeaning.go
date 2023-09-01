@@ -33,7 +33,7 @@ const (
 	ConsentDataMeaningAuthoredby
 )
 
-func (code ConsentDataMeaning) MarshalJSON() ([]byte, error) {
+ func (code *ConsentDataMeaning)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ConsentDataMeaning) UnmarshalJSON(json []byte) error {

@@ -44,7 +44,7 @@ const (
 	ContractResourceStatusCodesTerminated
 )
 
-func (code ContractResourceStatusCodes) MarshalJSON() ([]byte, error) {
+ func (code *ContractResourceStatusCodes)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ContractResourceStatusCodes) UnmarshalJSON(json []byte) error {

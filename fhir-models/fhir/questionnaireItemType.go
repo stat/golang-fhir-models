@@ -46,7 +46,7 @@ const (
 	QuestionnaireItemTypeQuantity
 )
 
-func (code QuestionnaireItemType) MarshalJSON() ([]byte, error) {
+ func (code *QuestionnaireItemType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *QuestionnaireItemType) UnmarshalJSON(json []byte) error {

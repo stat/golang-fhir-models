@@ -32,7 +32,7 @@ const (
 	UsePredetermination
 )
 
-func (code Use) MarshalJSON() ([]byte, error) {
+ func (code *Use)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *Use) UnmarshalJSON(json []byte) error {

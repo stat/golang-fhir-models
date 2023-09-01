@@ -35,7 +35,7 @@ const (
 	GuidanceResponseStatusEnteredInError
 )
 
-func (code GuidanceResponseStatus) MarshalJSON() ([]byte, error) {
+ func (code *GuidanceResponseStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *GuidanceResponseStatus) UnmarshalJSON(json []byte) error {

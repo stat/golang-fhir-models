@@ -99,7 +99,7 @@ type ActivityDefinitionDynamicValue struct {
 type OtherActivityDefinition ActivityDefinition
 
 // MarshalJSON marshals the given ActivityDefinition as JSON into a byte slice
-func (r ActivityDefinition) MarshalJSON() ([]byte, error) {
+ func (r *ActivityDefinition)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherActivityDefinition
 		ResourceType string `json:"resourceType"`

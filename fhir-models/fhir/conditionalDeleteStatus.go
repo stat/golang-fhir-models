@@ -32,7 +32,7 @@ const (
 	ConditionalDeleteStatusMultiple
 )
 
-func (code ConditionalDeleteStatus) MarshalJSON() ([]byte, error) {
+ func (code *ConditionalDeleteStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ConditionalDeleteStatus) UnmarshalJSON(json []byte) error {

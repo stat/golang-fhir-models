@@ -108,7 +108,7 @@ type EncounterLocation struct {
 type OtherEncounter Encounter
 
 // MarshalJSON marshals the given Encounter as JSON into a byte slice
-func (r Encounter) MarshalJSON() ([]byte, error) {
+ func (r *Encounter)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherEncounter
 		ResourceType string `json:"resourceType"`

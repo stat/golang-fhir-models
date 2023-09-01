@@ -79,7 +79,7 @@ type BiologicallyDerivedProductStorage struct {
 type OtherBiologicallyDerivedProduct BiologicallyDerivedProduct
 
 // MarshalJSON marshals the given BiologicallyDerivedProduct as JSON into a byte slice
-func (r BiologicallyDerivedProduct) MarshalJSON() ([]byte, error) {
+ func (r *BiologicallyDerivedProduct)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherBiologicallyDerivedProduct
 		ResourceType string `json:"resourceType"`

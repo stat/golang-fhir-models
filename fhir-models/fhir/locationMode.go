@@ -31,7 +31,7 @@ const (
 	LocationModeKind
 )
 
-func (code LocationMode) MarshalJSON() ([]byte, error) {
+ func (code *LocationMode)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *LocationMode) UnmarshalJSON(json []byte) error {

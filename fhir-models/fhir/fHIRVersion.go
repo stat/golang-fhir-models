@@ -51,7 +51,7 @@ const (
 	FHIRVersion4_0_1
 )
 
-func (code FHIRVersion) MarshalJSON() ([]byte, error) {
+ func (code *FHIRVersion)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *FHIRVersion) UnmarshalJSON(json []byte) error {

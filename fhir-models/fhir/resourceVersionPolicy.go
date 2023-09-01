@@ -32,7 +32,7 @@ const (
 	ResourceVersionPolicyVersionedUpdate
 )
 
-func (code ResourceVersionPolicy) MarshalJSON() ([]byte, error) {
+ func (code *ResourceVersionPolicy)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ResourceVersionPolicy) UnmarshalJSON(json []byte) error {

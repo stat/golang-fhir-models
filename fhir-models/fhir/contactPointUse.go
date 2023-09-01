@@ -34,7 +34,7 @@ const (
 	ContactPointUseMobile
 )
 
-func (code ContactPointUse) MarshalJSON() ([]byte, error) {
+ func (code *ContactPointUse)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ContactPointUse) UnmarshalJSON(json []byte) error {

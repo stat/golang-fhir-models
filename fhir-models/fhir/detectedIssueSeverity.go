@@ -32,7 +32,7 @@ const (
 	DetectedIssueSeverityLow
 )
 
-func (code DetectedIssueSeverity) MarshalJSON() ([]byte, error) {
+ func (code *DetectedIssueSeverity)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *DetectedIssueSeverity) UnmarshalJSON(json []byte) error {

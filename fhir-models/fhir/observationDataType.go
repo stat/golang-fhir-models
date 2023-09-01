@@ -40,7 +40,7 @@ const (
 	ObservationDataTypePeriod
 )
 
-func (code ObservationDataType) MarshalJSON() ([]byte, error) {
+ func (code *ObservationDataType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ObservationDataType) UnmarshalJSON(json []byte) error {

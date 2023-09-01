@@ -81,7 +81,7 @@ type SpecimenContainer struct {
 type OtherSpecimen Specimen
 
 // MarshalJSON marshals the given Specimen as JSON into a byte slice
-func (r Specimen) MarshalJSON() ([]byte, error) {
+ func (r *Specimen)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherSpecimen
 		ResourceType string `json:"resourceType"`

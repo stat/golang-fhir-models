@@ -39,7 +39,7 @@ const (
 	ConceptMapEquivalenceDisjoint
 )
 
-func (code ConceptMapEquivalence) MarshalJSON() ([]byte, error) {
+ func (code *ConceptMapEquivalence)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ConceptMapEquivalence) UnmarshalJSON(json []byte) error {

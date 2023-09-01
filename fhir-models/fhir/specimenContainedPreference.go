@@ -31,7 +31,7 @@ const (
 	SpecimenContainedPreferenceAlternate
 )
 
-func (code SpecimenContainedPreference) MarshalJSON() ([]byte, error) {
+ func (code *SpecimenContainedPreference)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *SpecimenContainedPreference) UnmarshalJSON(json []byte) error {

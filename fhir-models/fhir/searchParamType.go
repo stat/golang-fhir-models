@@ -38,7 +38,7 @@ const (
 	SearchParamTypeSpecial
 )
 
-func (code SearchParamType) MarshalJSON() ([]byte, error) {
+ func (code *SearchParamType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *SearchParamType) UnmarshalJSON(json []byte) error {

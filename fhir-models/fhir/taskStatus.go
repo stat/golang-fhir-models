@@ -41,7 +41,7 @@ const (
 	TaskStatusEnteredInError
 )
 
-func (code TaskStatus) MarshalJSON() ([]byte, error) {
+ func (code *TaskStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *TaskStatus) UnmarshalJSON(json []byte) error {

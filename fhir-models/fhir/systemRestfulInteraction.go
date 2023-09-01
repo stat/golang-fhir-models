@@ -46,7 +46,7 @@ const (
 	SystemRestfulInteractionOperation
 )
 
-func (code SystemRestfulInteraction) MarshalJSON() ([]byte, error) {
+ func (code *SystemRestfulInteraction)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *SystemRestfulInteraction) UnmarshalJSON(json []byte) error {

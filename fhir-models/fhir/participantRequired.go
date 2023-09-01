@@ -32,7 +32,7 @@ const (
 	ParticipantRequiredInformationOnly
 )
 
-func (code ParticipantRequired) MarshalJSON() ([]byte, error) {
+ func (code *ParticipantRequired)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ParticipantRequired) UnmarshalJSON(json []byte) error {

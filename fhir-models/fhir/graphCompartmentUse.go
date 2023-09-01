@@ -31,7 +31,7 @@ const (
 	GraphCompartmentUseRequirement
 )
 
-func (code GraphCompartmentUse) MarshalJSON() ([]byte, error) {
+ func (code *GraphCompartmentUse)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *GraphCompartmentUse) UnmarshalJSON(json []byte) error {

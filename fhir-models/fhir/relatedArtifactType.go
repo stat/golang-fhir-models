@@ -37,7 +37,7 @@ const (
 	RelatedArtifactTypeComposedOf
 )
 
-func (code RelatedArtifactType) MarshalJSON() ([]byte, error) {
+ func (code *RelatedArtifactType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *RelatedArtifactType) UnmarshalJSON(json []byte) error {

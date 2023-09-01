@@ -32,7 +32,7 @@ const (
 	MeasureReportStatusError
 )
 
-func (code MeasureReportStatus) MarshalJSON() ([]byte, error) {
+ func (code *MeasureReportStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *MeasureReportStatus) UnmarshalJSON(json []byte) error {

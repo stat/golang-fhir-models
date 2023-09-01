@@ -32,7 +32,7 @@ type Binary struct {
 type OtherBinary Binary
 
 // MarshalJSON marshals the given Binary as JSON into a byte slice
-func (r Binary) MarshalJSON() ([]byte, error) {
+ func (r *Binary)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherBinary
 		ResourceType string `json:"resourceType"`

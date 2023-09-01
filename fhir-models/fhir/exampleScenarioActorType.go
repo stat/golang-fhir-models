@@ -31,7 +31,7 @@ const (
 	ExampleScenarioActorTypeEntity
 )
 
-func (code ExampleScenarioActorType) MarshalJSON() ([]byte, error) {
+ func (code *ExampleScenarioActorType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ExampleScenarioActorType) UnmarshalJSON(json []byte) error {

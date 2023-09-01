@@ -33,7 +33,7 @@ const (
 	StructureMapTargetListModeCollate
 )
 
-func (code StructureMapTargetListMode) MarshalJSON() ([]byte, error) {
+ func (code *StructureMapTargetListMode)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *StructureMapTargetListMode) UnmarshalJSON(json []byte) error {

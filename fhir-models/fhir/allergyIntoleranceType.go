@@ -31,7 +31,7 @@ const (
 	AllergyIntoleranceTypeIntolerance
 )
 
-func (code AllergyIntoleranceType) MarshalJSON() ([]byte, error) {
+ func (code *AllergyIntoleranceType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *AllergyIntoleranceType) UnmarshalJSON(json []byte) error {

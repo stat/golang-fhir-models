@@ -32,7 +32,7 @@ const (
 	SearchEntryModeOutcome
 )
 
-func (code SearchEntryMode) MarshalJSON() ([]byte, error) {
+ func (code *SearchEntryMode)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *SearchEntryMode) UnmarshalJSON(json []byte) error {

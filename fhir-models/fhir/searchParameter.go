@@ -65,7 +65,7 @@ type SearchParameterComponent struct {
 type OtherSearchParameter SearchParameter
 
 // MarshalJSON marshals the given SearchParameter as JSON into a byte slice
-func (r SearchParameter) MarshalJSON() ([]byte, error) {
+ func (r *SearchParameter)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherSearchParameter
 		ResourceType string `json:"resourceType"`

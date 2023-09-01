@@ -41,7 +41,7 @@ const (
 	AssertionResponseTypesUnprocessable
 )
 
-func (code AssertionResponseTypes) MarshalJSON() ([]byte, error) {
+ func (code *AssertionResponseTypes)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *AssertionResponseTypes) UnmarshalJSON(json []byte) error {

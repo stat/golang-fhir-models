@@ -54,7 +54,7 @@ type CareTeamParticipant struct {
 type OtherCareTeam CareTeam
 
 // MarshalJSON marshals the given CareTeam as JSON into a byte slice
-func (r CareTeam) MarshalJSON() ([]byte, error) {
+ func (r *CareTeam)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherCareTeam
 		ResourceType string `json:"resourceType"`

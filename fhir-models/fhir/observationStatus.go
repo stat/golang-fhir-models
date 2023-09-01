@@ -37,7 +37,7 @@ const (
 	ObservationStatusUnknown
 )
 
-func (code ObservationStatus) MarshalJSON() ([]byte, error) {
+ func (code *ObservationStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ObservationStatus) UnmarshalJSON(json []byte) error {

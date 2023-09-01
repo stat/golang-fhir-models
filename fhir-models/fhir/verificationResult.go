@@ -79,7 +79,7 @@ type VerificationResultValidator struct {
 type OtherVerificationResult VerificationResult
 
 // MarshalJSON marshals the given VerificationResult as JSON into a byte slice
-func (r VerificationResult) MarshalJSON() ([]byte, error) {
+ func (r *VerificationResult)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherVerificationResult
 		ResourceType string `json:"resourceType"`

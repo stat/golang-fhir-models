@@ -34,7 +34,7 @@ const (
 	XPathUsageTypeOther
 )
 
-func (code XPathUsageType) MarshalJSON() ([]byte, error) {
+ func (code *XPathUsageType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *XPathUsageType) UnmarshalJSON(json []byte) error {

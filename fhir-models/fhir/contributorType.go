@@ -33,7 +33,7 @@ const (
 	ContributorTypeEndorser
 )
 
-func (code ContributorType) MarshalJSON() ([]byte, error) {
+ func (code *ContributorType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ContributorType) UnmarshalJSON(json []byte) error {

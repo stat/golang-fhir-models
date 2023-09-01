@@ -33,7 +33,7 @@ const (
 	VisionBaseOut
 )
 
-func (code VisionBase) MarshalJSON() ([]byte, error) {
+ func (code *VisionBase)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *VisionBase) UnmarshalJSON(json []byte) error {

@@ -36,7 +36,7 @@ const (
 	RequestStatusUnknown
 )
 
-func (code RequestStatus) MarshalJSON() ([]byte, error) {
+ func (code *RequestStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *RequestStatus) UnmarshalJSON(json []byte) error {

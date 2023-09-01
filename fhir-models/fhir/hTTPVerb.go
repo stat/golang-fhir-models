@@ -35,7 +35,7 @@ const (
 	HTTPVerbPATCH
 )
 
-func (code HTTPVerb) MarshalJSON() ([]byte, error) {
+ func (code *HTTPVerb)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *HTTPVerb) UnmarshalJSON(json []byte) error {

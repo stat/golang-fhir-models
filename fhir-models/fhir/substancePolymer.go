@@ -88,7 +88,7 @@ type SubstancePolymerRepeatRepeatUnitStructuralRepresentation struct {
 type OtherSubstancePolymer SubstancePolymer
 
 // MarshalJSON marshals the given SubstancePolymer as JSON into a byte slice
-func (r SubstancePolymer) MarshalJSON() ([]byte, error) {
+ func (r *SubstancePolymer)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherSubstancePolymer
 		ResourceType string `json:"resourceType"`

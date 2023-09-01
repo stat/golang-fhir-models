@@ -31,7 +31,7 @@ const (
 	AdverseEventActualityPotential
 )
 
-func (code AdverseEventActuality) MarshalJSON() ([]byte, error) {
+ func (code *AdverseEventActuality)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *AdverseEventActuality) UnmarshalJSON(json []byte) error {

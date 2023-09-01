@@ -32,7 +32,7 @@ const (
 	ActionRequiredBehaviorMustUnlessDocumented
 )
 
-func (code ActionRequiredBehavior) MarshalJSON() ([]byte, error) {
+ func (code *ActionRequiredBehavior)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ActionRequiredBehavior) UnmarshalJSON(json []byte) error {

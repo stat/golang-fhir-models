@@ -31,7 +31,7 @@ const (
 	EventCapabilityModeReceiver
 )
 
-func (code EventCapabilityMode) MarshalJSON() ([]byte, error) {
+ func (code *EventCapabilityMode)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *EventCapabilityMode) UnmarshalJSON(json []byte) error {

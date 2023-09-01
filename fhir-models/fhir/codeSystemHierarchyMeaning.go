@@ -33,7 +33,7 @@ const (
 	CodeSystemHierarchyMeaningClassifiedWith
 )
 
-func (code CodeSystemHierarchyMeaning) MarshalJSON() ([]byte, error) {
+ func (code *CodeSystemHierarchyMeaning)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *CodeSystemHierarchyMeaning) UnmarshalJSON(json []byte) error {

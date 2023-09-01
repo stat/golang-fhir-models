@@ -31,7 +31,7 @@ const (
 	CatalogEntryRelationTypeIsReplacedBy
 )
 
-func (code CatalogEntryRelationType) MarshalJSON() ([]byte, error) {
+ func (code *CatalogEntryRelationType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *CatalogEntryRelationType) UnmarshalJSON(json []byte) error {

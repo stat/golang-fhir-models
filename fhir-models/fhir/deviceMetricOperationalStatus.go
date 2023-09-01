@@ -33,7 +33,7 @@ const (
 	DeviceMetricOperationalStatusEnteredInError
 )
 
-func (code DeviceMetricOperationalStatus) MarshalJSON() ([]byte, error) {
+ func (code *DeviceMetricOperationalStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *DeviceMetricOperationalStatus) UnmarshalJSON(json []byte) error {

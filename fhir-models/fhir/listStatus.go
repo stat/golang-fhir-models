@@ -32,7 +32,7 @@ const (
 	ListStatusEnteredInError
 )
 
-func (code ListStatus) MarshalJSON() ([]byte, error) {
+ func (code *ListStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ListStatus) UnmarshalJSON(json []byte) error {

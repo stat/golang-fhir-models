@@ -39,7 +39,7 @@ const (
 	GuideParameterCodeHtmlTemplate
 )
 
-func (code GuideParameterCode) MarshalJSON() ([]byte, error) {
+ func (code *GuideParameterCode)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *GuideParameterCode) UnmarshalJSON(json []byte) error {

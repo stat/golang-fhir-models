@@ -33,7 +33,7 @@ const (
 	SubscriptionStatusOff
 )
 
-func (code SubscriptionStatus) MarshalJSON() ([]byte, error) {
+ func (code *SubscriptionStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *SubscriptionStatus) UnmarshalJSON(json []byte) error {

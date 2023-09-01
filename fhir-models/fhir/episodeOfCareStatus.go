@@ -36,7 +36,7 @@ const (
 	EpisodeOfCareStatusEnteredInError
 )
 
-func (code EpisodeOfCareStatus) MarshalJSON() ([]byte, error) {
+ func (code *EpisodeOfCareStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *EpisodeOfCareStatus) UnmarshalJSON(json []byte) error {

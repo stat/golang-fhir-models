@@ -32,7 +32,7 @@ const (
 	SlicingRulesOpenAtEnd
 )
 
-func (code SlicingRules) MarshalJSON() ([]byte, error) {
+ func (code *SlicingRules)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *SlicingRules) UnmarshalJSON(json []byte) error {

@@ -32,7 +32,7 @@ const (
 	ObservationRangeCategoryAbsolute
 )
 
-func (code ObservationRangeCategory) MarshalJSON() ([]byte, error) {
+ func (code *ObservationRangeCategory)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ObservationRangeCategory) UnmarshalJSON(json []byte) error {

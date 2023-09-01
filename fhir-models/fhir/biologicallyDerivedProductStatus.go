@@ -31,7 +31,7 @@ const (
 	BiologicallyDerivedProductStatusUnavailable
 )
 
-func (code BiologicallyDerivedProductStatus) MarshalJSON() ([]byte, error) {
+ func (code *BiologicallyDerivedProductStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *BiologicallyDerivedProductStatus) UnmarshalJSON(json []byte) error {

@@ -71,7 +71,7 @@ type MessageHeaderResponse struct {
 type OtherMessageHeader MessageHeader
 
 // MarshalJSON marshals the given MessageHeader as JSON into a byte slice
-func (r MessageHeader) MarshalJSON() ([]byte, error) {
+ func (r *MessageHeader)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherMessageHeader
 		ResourceType string `json:"resourceType"`

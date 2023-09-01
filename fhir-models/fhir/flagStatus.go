@@ -32,7 +32,7 @@ const (
 	FlagStatusEnteredInError
 )
 
-func (code FlagStatus) MarshalJSON() ([]byte, error) {
+ func (code *FlagStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *FlagStatus) UnmarshalJSON(json []byte) error {

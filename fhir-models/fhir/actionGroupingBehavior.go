@@ -32,7 +32,7 @@ const (
 	ActionGroupingBehaviorSentenceGroup
 )
 
-func (code ActionGroupingBehavior) MarshalJSON() ([]byte, error) {
+ func (code *ActionGroupingBehavior)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ActionGroupingBehavior) UnmarshalJSON(json []byte) error {

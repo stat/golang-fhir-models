@@ -40,7 +40,7 @@ const (
 	AssertionOperatorTypeEval
 )
 
-func (code AssertionOperatorType) MarshalJSON() ([]byte, error) {
+ func (code *AssertionOperatorType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *AssertionOperatorType) UnmarshalJSON(json []byte) error {

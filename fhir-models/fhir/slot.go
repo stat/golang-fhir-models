@@ -43,7 +43,7 @@ type Slot struct {
 type OtherSlot Slot
 
 // MarshalJSON marshals the given Slot as JSON into a byte slice
-func (r Slot) MarshalJSON() ([]byte, error) {
+ func (r *Slot)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherSlot
 		ResourceType string `json:"resourceType"`

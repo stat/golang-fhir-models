@@ -34,7 +34,7 @@ const (
 	StructureMapSourceListModeOnly_one
 )
 
-func (code StructureMapSourceListMode) MarshalJSON() ([]byte, error) {
+ func (code *StructureMapSourceListMode)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *StructureMapSourceListMode) UnmarshalJSON(json []byte) error {

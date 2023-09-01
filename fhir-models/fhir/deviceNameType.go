@@ -35,7 +35,7 @@ const (
 	DeviceNameTypeOther
 )
 
-func (code DeviceNameType) MarshalJSON() ([]byte, error) {
+ func (code *DeviceNameType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *DeviceNameType) UnmarshalJSON(json []byte) error {

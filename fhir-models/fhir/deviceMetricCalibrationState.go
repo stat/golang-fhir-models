@@ -33,7 +33,7 @@ const (
 	DeviceMetricCalibrationStateUnspecified
 )
 
-func (code DeviceMetricCalibrationState) MarshalJSON() ([]byte, error) {
+ func (code *DeviceMetricCalibrationState)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *DeviceMetricCalibrationState) UnmarshalJSON(json []byte) error {

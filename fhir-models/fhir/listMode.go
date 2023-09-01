@@ -32,7 +32,7 @@ const (
 	ListModeChanges
 )
 
-func (code ListMode) MarshalJSON() ([]byte, error) {
+ func (code *ListMode)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ListMode) UnmarshalJSON(json []byte) error {

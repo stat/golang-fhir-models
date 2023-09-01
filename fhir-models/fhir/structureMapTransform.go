@@ -46,7 +46,7 @@ const (
 	StructureMapTransformCp
 )
 
-func (code StructureMapTransform) MarshalJSON() ([]byte, error) {
+ func (code *StructureMapTransform)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *StructureMapTransform) UnmarshalJSON(json []byte) error {

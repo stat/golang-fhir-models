@@ -33,7 +33,7 @@ const (
 	StructureMapModelModeProduced
 )
 
-func (code StructureMapModelMode) MarshalJSON() ([]byte, error) {
+ func (code *StructureMapModelMode)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *StructureMapModelMode) UnmarshalJSON(json []byte) error {

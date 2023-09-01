@@ -33,7 +33,7 @@ const (
 	FHIRDeviceStatusUnknown
 )
 
-func (code FHIRDeviceStatus) MarshalJSON() ([]byte, error) {
+ func (code *FHIRDeviceStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *FHIRDeviceStatus) UnmarshalJSON(json []byte) error {

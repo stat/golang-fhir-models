@@ -33,7 +33,7 @@ const (
 	DocumentRelationshipTypeAppends
 )
 
-func (code DocumentRelationshipType) MarshalJSON() ([]byte, error) {
+ func (code *DocumentRelationshipType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *DocumentRelationshipType) UnmarshalJSON(json []byte) error {

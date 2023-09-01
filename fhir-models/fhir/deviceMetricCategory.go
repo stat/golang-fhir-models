@@ -33,7 +33,7 @@ const (
 	DeviceMetricCategoryUnspecified
 )
 
-func (code DeviceMetricCategory) MarshalJSON() ([]byte, error) {
+ func (code *DeviceMetricCategory)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *DeviceMetricCategory) UnmarshalJSON(json []byte) error {

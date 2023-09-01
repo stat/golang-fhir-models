@@ -33,7 +33,7 @@ const (
 	NarrativeStatusEmpty
 )
 
-func (code NarrativeStatus) MarshalJSON() ([]byte, error) {
+ func (code *NarrativeStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *NarrativeStatus) UnmarshalJSON(json []byte) error {

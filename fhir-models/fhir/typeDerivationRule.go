@@ -31,7 +31,7 @@ const (
 	TypeDerivationRuleConstraint
 )
 
-func (code TypeDerivationRule) MarshalJSON() ([]byte, error) {
+ func (code *TypeDerivationRule)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *TypeDerivationRule) UnmarshalJSON(json []byte) error {

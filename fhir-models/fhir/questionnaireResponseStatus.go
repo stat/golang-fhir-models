@@ -34,7 +34,7 @@ const (
 	QuestionnaireResponseStatusStopped
 )
 
-func (code QuestionnaireResponseStatus) MarshalJSON() ([]byte, error) {
+ func (code *QuestionnaireResponseStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *QuestionnaireResponseStatus) UnmarshalJSON(json []byte) error {

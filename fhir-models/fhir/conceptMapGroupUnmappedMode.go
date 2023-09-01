@@ -32,7 +32,7 @@ const (
 	ConceptMapGroupUnmappedModeOtherMap
 )
 
-func (code ConceptMapGroupUnmappedMode) MarshalJSON() ([]byte, error) {
+ func (code *ConceptMapGroupUnmappedMode)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ConceptMapGroupUnmappedMode) UnmarshalJSON(json []byte) error {

@@ -33,7 +33,7 @@ const (
 	ExplanationOfBenefitStatusEnteredInError
 )
 
-func (code ExplanationOfBenefitStatus) MarshalJSON() ([]byte, error) {
+ func (code *ExplanationOfBenefitStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ExplanationOfBenefitStatus) UnmarshalJSON(json []byte) error {

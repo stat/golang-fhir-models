@@ -34,7 +34,7 @@ const (
 	SubscriptionChannelTypeMessage
 )
 
-func (code SubscriptionChannelType) MarshalJSON() ([]byte, error) {
+ func (code *SubscriptionChannelType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *SubscriptionChannelType) UnmarshalJSON(json []byte) error {

@@ -46,7 +46,7 @@ const (
 	TypeRestfulInteractionOperation
 )
 
-func (code TypeRestfulInteraction) MarshalJSON() ([]byte, error) {
+ func (code *TypeRestfulInteraction)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *TypeRestfulInteraction) UnmarshalJSON(json []byte) error {

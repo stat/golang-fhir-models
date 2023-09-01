@@ -31,7 +31,7 @@ const (
 	ConstraintSeverityWarning
 )
 
-func (code ConstraintSeverity) MarshalJSON() ([]byte, error) {
+ func (code *ConstraintSeverity)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ConstraintSeverity) UnmarshalJSON(json []byte) error {

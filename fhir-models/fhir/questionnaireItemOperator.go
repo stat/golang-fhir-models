@@ -36,7 +36,7 @@ const (
 	QuestionnaireItemOperatorLessOrEquals
 )
 
-func (code QuestionnaireItemOperator) MarshalJSON() ([]byte, error) {
+ func (code *QuestionnaireItemOperator)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *QuestionnaireItemOperator) UnmarshalJSON(json []byte) error {

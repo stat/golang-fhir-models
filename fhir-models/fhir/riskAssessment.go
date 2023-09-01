@@ -63,7 +63,7 @@ type RiskAssessmentPrediction struct {
 type OtherRiskAssessment RiskAssessment
 
 // MarshalJSON marshals the given RiskAssessment as JSON into a byte slice
-func (r RiskAssessment) MarshalJSON() ([]byte, error) {
+ func (r *RiskAssessment)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherRiskAssessment
 		ResourceType string `json:"resourceType"`

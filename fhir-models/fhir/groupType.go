@@ -35,7 +35,7 @@ const (
 	GroupTypeSubstance
 )
 
-func (code GroupType) MarshalJSON() ([]byte, error) {
+ func (code *GroupType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *GroupType) UnmarshalJSON(json []byte) error {

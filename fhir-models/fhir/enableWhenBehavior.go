@@ -31,7 +31,7 @@ const (
 	EnableWhenBehaviorAny
 )
 
-func (code EnableWhenBehavior) MarshalJSON() ([]byte, error) {
+ func (code *EnableWhenBehavior)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *EnableWhenBehavior) UnmarshalJSON(json []byte) error {

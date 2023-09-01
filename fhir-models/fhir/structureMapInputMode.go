@@ -31,7 +31,7 @@ const (
 	StructureMapInputModeTarget
 )
 
-func (code StructureMapInputMode) MarshalJSON() ([]byte, error) {
+ func (code *StructureMapInputMode)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *StructureMapInputMode) UnmarshalJSON(json []byte) error {

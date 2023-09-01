@@ -36,7 +36,7 @@ const (
 	ImmunizationEvaluationStatusCodesUnknown
 )
 
-func (code ImmunizationEvaluationStatusCodes) MarshalJSON() ([]byte, error) {
+ func (code *ImmunizationEvaluationStatusCodes)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ImmunizationEvaluationStatusCodes) UnmarshalJSON(json []byte) error {

@@ -108,7 +108,7 @@ type TestReportTeardownAction struct {
 type OtherTestReport TestReport
 
 // MarshalJSON marshals the given TestReport as JSON into a byte slice
-func (r TestReport) MarshalJSON() ([]byte, error) {
+ func (r *TestReport)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherTestReport
 		ResourceType string `json:"resourceType"`

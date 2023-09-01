@@ -33,7 +33,7 @@ const (
 	EligibilityRequestPurposeValidation
 )
 
-func (code EligibilityRequestPurpose) MarshalJSON() ([]byte, error) {
+ func (code *EligibilityRequestPurpose)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *EligibilityRequestPurpose) UnmarshalJSON(json []byte) error {

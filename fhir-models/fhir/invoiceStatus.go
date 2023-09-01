@@ -34,7 +34,7 @@ const (
 	InvoiceStatusEnteredInError
 )
 
-func (code InvoiceStatus) MarshalJSON() ([]byte, error) {
+ func (code *InvoiceStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *InvoiceStatus) UnmarshalJSON(json []byte) error {

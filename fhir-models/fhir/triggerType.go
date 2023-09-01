@@ -37,7 +37,7 @@ const (
 	TriggerTypeDataAccessEnded
 )
 
-func (code TriggerType) MarshalJSON() ([]byte, error) {
+ func (code *TriggerType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *TriggerType) UnmarshalJSON(json []byte) error {

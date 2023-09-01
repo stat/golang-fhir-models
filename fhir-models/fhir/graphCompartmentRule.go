@@ -33,7 +33,7 @@ const (
 	GraphCompartmentRuleCustom
 )
 
-func (code GraphCompartmentRule) MarshalJSON() ([]byte, error) {
+ func (code *GraphCompartmentRule)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *GraphCompartmentRule) UnmarshalJSON(json []byte) error {

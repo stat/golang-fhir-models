@@ -29,7 +29,7 @@ type Resource struct {
 type OtherResource Resource
 
 // MarshalJSON marshals the given Resource as JSON into a byte slice
-func (r Resource) MarshalJSON() ([]byte, error) {
+ func (r *Resource)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherResource
 		ResourceType string `json:"resourceType"`

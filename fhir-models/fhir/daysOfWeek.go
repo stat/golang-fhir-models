@@ -36,7 +36,7 @@ const (
 	DaysOfWeekSun
 )
 
-func (code DaysOfWeek) MarshalJSON() ([]byte, error) {
+ func (code *DaysOfWeek)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *DaysOfWeek) UnmarshalJSON(json []byte) error {

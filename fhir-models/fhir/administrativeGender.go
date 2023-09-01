@@ -33,7 +33,7 @@ const (
 	AdministrativeGenderUnknown
 )
 
-func (code AdministrativeGender) MarshalJSON() ([]byte, error) {
+ func (code *AdministrativeGender)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *AdministrativeGender) UnmarshalJSON(json []byte) error {

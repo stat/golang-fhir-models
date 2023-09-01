@@ -36,7 +36,7 @@ const (
 	PropertyTypeDecimal
 )
 
-func (code PropertyType) MarshalJSON() ([]byte, error) {
+ func (code *PropertyType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *PropertyType) UnmarshalJSON(json []byte) error {

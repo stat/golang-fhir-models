@@ -86,7 +86,7 @@ type CompositionSection struct {
 type OtherComposition Composition
 
 // MarshalJSON marshals the given Composition as JSON into a byte slice
-func (r Composition) MarshalJSON() ([]byte, error) {
+ func (r *Composition)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherComposition
 		ResourceType string `json:"resourceType"`

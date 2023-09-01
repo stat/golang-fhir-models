@@ -32,7 +32,7 @@ const (
 	FHIRSubstanceStatusEnteredInError
 )
 
-func (code FHIRSubstanceStatus) MarshalJSON() ([]byte, error) {
+ func (code *FHIRSubstanceStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *FHIRSubstanceStatus) UnmarshalJSON(json []byte) error {

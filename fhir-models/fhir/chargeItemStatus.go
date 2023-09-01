@@ -36,7 +36,7 @@ const (
 	ChargeItemStatusUnknown
 )
 
-func (code ChargeItemStatus) MarshalJSON() ([]byte, error) {
+ func (code *ChargeItemStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ChargeItemStatus) UnmarshalJSON(json []byte) error {

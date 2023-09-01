@@ -31,7 +31,7 @@ const (
 	SortDirectionDescending
 )
 
-func (code SortDirection) MarshalJSON() ([]byte, error) {
+ func (code *SortDirection)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *SortDirection) UnmarshalJSON(json []byte) error {

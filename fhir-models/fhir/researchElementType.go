@@ -32,7 +32,7 @@ const (
 	ResearchElementTypeOutcome
 )
 
-func (code ResearchElementType) MarshalJSON() ([]byte, error) {
+ func (code *ResearchElementType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ResearchElementType) UnmarshalJSON(json []byte) error {

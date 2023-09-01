@@ -34,7 +34,7 @@ const (
 	TestReportStatusEnteredInError
 )
 
-func (code TestReportStatus) MarshalJSON() ([]byte, error) {
+ func (code *TestReportStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *TestReportStatus) UnmarshalJSON(json []byte) error {

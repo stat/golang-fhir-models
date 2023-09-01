@@ -35,7 +35,7 @@ const (
 	EndpointStatusTest
 )
 
-func (code EndpointStatus) MarshalJSON() ([]byte, error) {
+ func (code *EndpointStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *EndpointStatus) UnmarshalJSON(json []byte) error {

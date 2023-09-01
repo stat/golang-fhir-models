@@ -34,7 +34,7 @@ const (
 	AuditEventAgentNetworkType5
 )
 
-func (code AuditEventAgentNetworkType) MarshalJSON() ([]byte, error) {
+ func (code *AuditEventAgentNetworkType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *AuditEventAgentNetworkType) UnmarshalJSON(json []byte) error {

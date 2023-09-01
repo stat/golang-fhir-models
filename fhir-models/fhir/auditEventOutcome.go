@@ -33,7 +33,7 @@ const (
 	AuditEventOutcome12
 )
 
-func (code AuditEventOutcome) MarshalJSON() ([]byte, error) {
+ func (code *AuditEventOutcome)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *AuditEventOutcome) UnmarshalJSON(json []byte) error {

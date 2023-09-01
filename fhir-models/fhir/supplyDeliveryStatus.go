@@ -33,7 +33,7 @@ const (
 	SupplyDeliveryStatusEnteredInError
 )
 
-func (code SupplyDeliveryStatus) MarshalJSON() ([]byte, error) {
+ func (code *SupplyDeliveryStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *SupplyDeliveryStatus) UnmarshalJSON(json []byte) error {

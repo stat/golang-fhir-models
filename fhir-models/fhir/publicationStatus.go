@@ -33,7 +33,7 @@ const (
 	PublicationStatusUnknown
 )
 
-func (code PublicationStatus) MarshalJSON() ([]byte, error) {
+ func (code *PublicationStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *PublicationStatus) UnmarshalJSON(json []byte) error {

@@ -33,7 +33,7 @@ const (
 	EncounterLocationStatusCompleted
 )
 
-func (code EncounterLocationStatus) MarshalJSON() ([]byte, error) {
+ func (code *EncounterLocationStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *EncounterLocationStatus) UnmarshalJSON(json []byte) error {

@@ -38,7 +38,7 @@ const (
 	GoalLifecycleStatusRejected
 )
 
-func (code GoalLifecycleStatus) MarshalJSON() ([]byte, error) {
+ func (code *GoalLifecycleStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *GoalLifecycleStatus) UnmarshalJSON(json []byte) error {

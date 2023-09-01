@@ -32,7 +32,7 @@ const (
 	AddressTypeBoth
 )
 
-func (code AddressType) MarshalJSON() ([]byte, error) {
+ func (code *AddressType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *AddressType) UnmarshalJSON(json []byte) error {

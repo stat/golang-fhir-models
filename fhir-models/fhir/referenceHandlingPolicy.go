@@ -34,7 +34,7 @@ const (
 	ReferenceHandlingPolicyLocal
 )
 
-func (code ReferenceHandlingPolicy) MarshalJSON() ([]byte, error) {
+ func (code *ReferenceHandlingPolicy)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ReferenceHandlingPolicy) UnmarshalJSON(json []byte) error {

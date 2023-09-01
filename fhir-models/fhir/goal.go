@@ -64,7 +64,7 @@ type GoalTarget struct {
 type OtherGoal Goal
 
 // MarshalJSON marshals the given Goal as JSON into a byte slice
-func (r Goal) MarshalJSON() ([]byte, error) {
+ func (r *Goal)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherGoal
 		ResourceType string `json:"resourceType"`

@@ -32,7 +32,7 @@ const (
 	ResponseTypeFatalError
 )
 
-func (code ResponseType) MarshalJSON() ([]byte, error) {
+ func (code *ResponseType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ResponseType) UnmarshalJSON(json []byte) error {

@@ -33,7 +33,7 @@ const (
 	StructureDefinitionKindLogical
 )
 
-func (code StructureDefinitionKind) MarshalJSON() ([]byte, error) {
+ func (code *StructureDefinitionKind)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *StructureDefinitionKind) UnmarshalJSON(json []byte) error {

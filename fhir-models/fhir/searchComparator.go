@@ -38,7 +38,7 @@ const (
 	SearchComparatorAp
 )
 
-func (code SearchComparator) MarshalJSON() ([]byte, error) {
+ func (code *SearchComparator)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *SearchComparator) UnmarshalJSON(json []byte) error {

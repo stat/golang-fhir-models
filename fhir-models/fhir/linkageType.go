@@ -32,7 +32,7 @@ const (
 	LinkageTypeHistorical
 )
 
-func (code LinkageType) MarshalJSON() ([]byte, error) {
+ func (code *LinkageType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *LinkageType) UnmarshalJSON(json []byte) error {

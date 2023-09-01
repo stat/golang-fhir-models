@@ -39,7 +39,7 @@ const (
 	DiagnosticReportStatusUnknown
 )
 
-func (code DiagnosticReportStatus) MarshalJSON() ([]byte, error) {
+ func (code *DiagnosticReportStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *DiagnosticReportStatus) UnmarshalJSON(json []byte) error {

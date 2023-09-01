@@ -37,7 +37,7 @@ const (
 	DeviceMetricColorWhite
 )
 
-func (code DeviceMetricColor) MarshalJSON() ([]byte, error) {
+ func (code *DeviceMetricColor)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *DeviceMetricColor) UnmarshalJSON(json []byte) error {

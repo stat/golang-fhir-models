@@ -31,7 +31,7 @@ const (
 	ConsentProvisionTypePermit
 )
 
-func (code ConsentProvisionType) MarshalJSON() ([]byte, error) {
+ func (code *ConsentProvisionType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ConsentProvisionType) UnmarshalJSON(json []byte) error {

@@ -31,7 +31,7 @@ const (
 	RestfulCapabilityModeServer
 )
 
-func (code RestfulCapabilityMode) MarshalJSON() ([]byte, error) {
+ func (code *RestfulCapabilityMode)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *RestfulCapabilityMode) UnmarshalJSON(json []byte) error {

@@ -85,7 +85,7 @@ type CoverageEligibilityRequestItemDiagnosis struct {
 type OtherCoverageEligibilityRequest CoverageEligibilityRequest
 
 // MarshalJSON marshals the given CoverageEligibilityRequest as JSON into a byte slice
-func (r CoverageEligibilityRequest) MarshalJSON() ([]byte, error) {
+ func (r *CoverageEligibilityRequest)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherCoverageEligibilityRequest
 		ResourceType string `json:"resourceType"`

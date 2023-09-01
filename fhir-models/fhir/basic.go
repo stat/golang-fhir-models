@@ -37,7 +37,7 @@ type Basic struct {
 type OtherBasic Basic
 
 // MarshalJSON marshals the given Basic as JSON into a byte slice
-func (r Basic) MarshalJSON() ([]byte, error) {
+ func (r *Basic)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherBasic
 		ResourceType string `json:"resourceType"`

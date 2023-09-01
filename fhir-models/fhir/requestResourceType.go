@@ -44,7 +44,7 @@ const (
 	RequestResourceTypeVisionPrescription
 )
 
-func (code RequestResourceType) MarshalJSON() ([]byte, error) {
+ func (code *RequestResourceType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *RequestResourceType) UnmarshalJSON(json []byte) error {

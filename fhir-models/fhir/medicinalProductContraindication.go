@@ -47,7 +47,7 @@ type MedicinalProductContraindicationOtherTherapy struct {
 type OtherMedicinalProductContraindication MedicinalProductContraindication
 
 // MarshalJSON marshals the given MedicinalProductContraindication as JSON into a byte slice
-func (r MedicinalProductContraindication) MarshalJSON() ([]byte, error) {
+ func (r *MedicinalProductContraindication)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherMedicinalProductContraindication
 		ResourceType string `json:"resourceType"`

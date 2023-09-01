@@ -35,7 +35,7 @@ const (
 	ConsentStateEnteredInError
 )
 
-func (code ConsentState) MarshalJSON() ([]byte, error) {
+ func (code *ConsentState)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *ConsentState) UnmarshalJSON(json []byte) error {

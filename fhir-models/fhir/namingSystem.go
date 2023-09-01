@@ -55,7 +55,7 @@ type NamingSystemUniqueId struct {
 type OtherNamingSystem NamingSystem
 
 // MarshalJSON marshals the given NamingSystem as JSON into a byte slice
-func (r NamingSystem) MarshalJSON() ([]byte, error) {
+ func (r *NamingSystem)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherNamingSystem
 		ResourceType string `json:"resourceType"`

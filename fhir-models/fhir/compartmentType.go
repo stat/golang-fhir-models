@@ -34,7 +34,7 @@ const (
 	CompartmentTypeDevice
 )
 
-func (code CompartmentType) MarshalJSON() ([]byte, error) {
+ func (code *CompartmentType)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *CompartmentType) UnmarshalJSON(json []byte) error {

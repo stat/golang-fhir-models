@@ -131,7 +131,7 @@ type TerminologyCapabilitiesClosure struct {
 type OtherTerminologyCapabilities TerminologyCapabilities
 
 // MarshalJSON marshals the given TerminologyCapabilities as JSON into a byte slice
-func (r TerminologyCapabilities) MarshalJSON() ([]byte, error) {
+ func (r *TerminologyCapabilities)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherTerminologyCapabilities
 		ResourceType string `json:"resourceType"`

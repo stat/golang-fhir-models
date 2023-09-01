@@ -58,7 +58,7 @@ type DiagnosticReportMedia struct {
 type OtherDiagnosticReport DiagnosticReport
 
 // MarshalJSON marshals the given DiagnosticReport as JSON into a byte slice
-func (r DiagnosticReport) MarshalJSON() ([]byte, error) {
+ func (r *DiagnosticReport)MarshalJSON() ([]byte, error) {
 	return json.Marshal(struct {
 		OtherDiagnosticReport
 		ResourceType string `json:"resourceType"`

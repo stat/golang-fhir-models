@@ -39,7 +39,7 @@ const (
 	AppointmentStatusWaitlist
 )
 
-func (code AppointmentStatus) MarshalJSON() ([]byte, error) {
+ func (code *AppointmentStatus)MarshalJSON() ([]byte, error) {
 	return json.Marshal(code.Code())
 }
 func (code *AppointmentStatus) UnmarshalJSON(json []byte) error {
